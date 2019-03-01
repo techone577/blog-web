@@ -2,10 +2,18 @@ $(function () {
     // $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 
     var md_editor = editormd("my-editormd", {//注意1：这里的就是上面的DIV的id属性值
-        width   : "90%",
-        height  : 640,
+        width   : "100%",
+        // height  : 800,
         syncScrolling : "single",
         path    : "/editor/lib/",//注意2：你的路径
+        onfullscreen : function() {
+            console.log("full");
+            $("#right_bar").slideUp();
+        },
+        onfullscreenExit  : function() {
+            console.log("full");
+            $("#right_bar").slideDown();
+        },
         saveHTMLToTextarea : true,//注意3：这个配置，方便post提交表单
 
         emoji: true,//emoji表情，默认关闭
@@ -39,9 +47,9 @@ $(function () {
             //this.resize("100%", 640);
         },
         /**设置主题颜色*/
-        editorTheme: "pastel-on-dark",
+        editorTheme: "3024-day",
         theme: "gray",
-        previewTheme: "dark"
+        previewTheme: "default"
 
     });
     function ajaxOption(url, data, callback, option) {

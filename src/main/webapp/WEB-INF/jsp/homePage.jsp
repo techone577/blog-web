@@ -131,32 +131,23 @@
 
     <div class="carousel-content text-center white-text wow fadeIn">
         <div class="row mx-0 headfont mb-5 pb-3">
-
             <div class="col-12 col-sm-5 align-middle">
                 <a href="https://orianna-zzo.github.io/">
-
                     <img class="pull-right avatar avatar-lg " src="https://orianna-zzo.github.io/img/profile.jpg" alt="" >
-
                 </a>
             </div>
-
-
             <div class="col-12 col-sm-7 text-left pl-5">
-
                 <a href="https://orianna-zzo.github.io/">
                     <h1 class="display-4 mb-2 mt-2 h1">
                         <strong>TECHONE_DUAN</strong>
                     </h1>
                 </a>
-
                 <p class="mb-0 p" style="font-size: 1.250rem; font-weight: 200;">
                     Be myself.
                 </p>
-
                 <p class="mb-0 p" style="font-size: 1.250rem; font-weight: 200;">
                     Love the wonderful world.
                 </p>
-
                 <p class="mb-0 p" style="font-size: 1.250rem; font-weight: 200;">
                     Do the right things and be a better man.
                 </p>
@@ -166,8 +157,8 @@
 
                     <%--github--%>
                     <a href="//github.com/orianna-zzo" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
-                    <%--linkedin--%>
-                    <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+                    <%--weibo--%>
+                    <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1" aria-hidden="true"></i></a>
                     <%--instagram--%>
                     <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
                     <%--envelope--%>
@@ -783,44 +774,37 @@
     </div>
 </main>
 
+<%-- 文章展示模板 --%>
 <div class="post-wrapper white-bg post-card" id="post_template" style="display: none">
     <a class="a" href="https://orianna-zzo.github.io/blog/2018-09/%E8%88%9E%E5%89%A7cinderellarepo/">
         <div class="post-header text-center">
-            <div class="px-4 post-heading title"></div>
+            <div class="px-4 post-heading title">题目</div>
             <ul class="post-meta li-x mt-1">
-                <li class="date">Sep 12, 2018</li>
+                <li class="date">日期</li>
                 <li class="middot"></li>
                 <li>One minute read</li>
             </ul>
         </div>
         <div class="view">
-            <img class="img" src="https://orianna-zzo.github.io/images/series/%E8%A7%82%E5%90%8Erepo/2018-09/cinderella-ad.jpg" />
+            <%--图片--%>
+            <img class="img"/>
         </div>
-        <div class="summary"></div>
+        <div class="summary">概述</div>
 
     </a>
 
     <div class="post-meta li-x mt-2 div-x">
+        <%-- 所属series--%>
         <div>
             <li><a href="https://orianna-zzo.github.io/categories/%E5%93%81%E9%89%B4%E8%AF%84%E8%AE%BA"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 品鉴评论 </a></li>
-
             <li><a href="https://orianna-zzo.github.io/series/%E8%A7%82%E5%90%8Erepo"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>观后repo</a></li>
 
-
         </div>
-
+        <%-- 所持有的tag --%>
         <div>
-
             <div class="li-x div-x post-meta">
                 <li class="pr-0"><a href="https://orianna-zzo.github.io/tags/"><i class="fas fa-tags"></i></a></li>
-                <div class="tags-sm">
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E8%88%9E%E5%89%A7" role="button">舞剧 </a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button">文广 </a></li>
-
-
+                <div class="tags-sm post_tags" id="post_tags">
                 </div>
             </div>
 
@@ -829,46 +813,31 @@
 
 </div>
 
+<%-- card模板 --%>
+<div class="card card-cascade wider mb-4 mt-2" id="series_card_template" style="display: none">
+    <a href="https://orianna-zzo.github.io/series/%E5%89%8D%E7%AB%AF%E8%AF%95%E6%B0%B4">
+        <div class="view view-cascade overlay">
+            <img class="card-img-top" src="https://orianna-zzo.github.io/images/series/%E5%89%8D%E7%AB%AF%E8%AF%95%E6%B0%B4/web.jpg" >
+            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+        </div>
+        <div class="card-body card-body-cascade text-center">
+            <h4 class="card-title"><strong>前端试水 (3)</strong></h4>
+            <p class="card-text">前端相关技术以应用为目的浅尝辄止地了解。 </p>
+        </div>
+    </a>
+</div>
+
+<%--tag模板--%>
+<li><a id = "tag_template" href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button" style="display: none">名称 </a></li>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-
-
     <div class="pb-2 mt-5 pt-5">
-
         <a href="//github.com/orianna-zzo " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>
-
-
         <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
-
-
-
-
-
-
-
-
-
         <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
-
-
-
-
-
-
         <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
-
-
-
-
-
-
     </div>
-
-
-
     <div class="copyright py-4">
-
         <span>  2016 - 2018 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
     </div>
 

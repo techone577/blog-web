@@ -11,11 +11,31 @@ $(function () {
         t.find(".date").text("Dec,39,2018");
         t.find(".summary").text("this is really a test");
         t.find(".img").attr("src","/images/orianna_in_the_wood.jpg");
+
+        var tag = $("#tag_template").clone();
+        tag.text("标签");
+        tag.attr("href","www.baidu.com");
+        tag.show();
         t.show();
         $("#post_container").append(t)
+        $("#post_tags").append(tag);
     })
 
+    function addPost() {
+        var t = $("#post_template").clone();
+        t.find(".title").text("this is a test");
+        t.find(".date").text("Dec,39,2018");
+        t.find(".summary").text("this is really a test");
+        t.find(".img").attr("src","/images/orianna_in_the_wood.jpg");
 
+        var tag = $("#tag_template").clone();
+        tag.text("标签");
+        tag.attr("href","www.baidu.com");
+        tag.show();
+        t.show();
+        $("#post_container").append(t)
+        t.find(".post_tags").append(tag);
+    }
 
 
 
