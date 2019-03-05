@@ -31,28 +31,26 @@
         </div>
         <div class="col-lg-2" id="right_bar" style="overflow-y: auto;overflow-x:hidden;height: 100%;position: relative">
             <div class="row">
-                <div class="col-lg-12" style="float: none">
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-
-                </div>
-                <div class="col-lg-12" style="line-height: 15px">
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
-                    <div class="layui-btn">button</div>
+                <div class="col-lg-12" style="float: none;margin-top: 40px">
+                    <div class="form-inline">
+                        <div class="layui-btn form-control">button</div>
+                        <input class="layui-input form-control" placeholder="test"/>
+                    </div>
+                    <div class="form-inline">
+                        <div class="layui-btn form-control">button</div>
+                        <input class="layui-input form-control" placeholder="test"/>
+                    </div>
+                    <div class="form-inline">
+                        <div class="layui-btn form-control">button</div>
+                        <input class="layui-input form-control" placeholder="test"/>
+                    </div>
+                    <div class="form-inline">
+                        <div class="layui-btn form-control">button</div>
+                        <input class="layui-input form-control" placeholder="test"/>
+                    </div>
+                <div class="col-lg-12" style="line-height: 50px;margin-top: 40px">
                     <aButton id="admin_sign_in_btn" data-title="返回"></aButton>
-                    <button class="bubbly-button" id="back_btn">返回</button>
-                    <button class="bubbly-button" id="post_submit_btn">保存</button>
+                    <aButton id="admin_sign_in_btn2" data-title="保存"></aButton>
                 </div>
             </div>
         </div>
