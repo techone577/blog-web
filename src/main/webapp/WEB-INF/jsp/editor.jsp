@@ -33,24 +33,25 @@
             <div class="row">
                 <div class="col-lg-12" style="float: none;margin-top: 40px">
                     <div class="form-inline">
-                        <div class="layui-btn form-control">button</div>
-                        <input class="layui-input form-control" placeholder="test"/>
+                        <div class="layui-btn form-control">标题</div>
+                        <input class="layui-input form-control" placeholder="标题"/>
                     </div>
                     <div class="form-inline">
-                        <div class="layui-btn form-control">button</div>
-                        <input class="layui-input form-control" placeholder="test"/>
+                        <div class="layui-btn ">概述</div>
+                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea" style="margin-top: 10px"></textarea>
                     </div>
                     <div class="form-inline">
-                        <div class="layui-btn form-control">button</div>
-                        <input class="layui-input form-control" placeholder="test"/>
+                        <button class="layui-btn" id="tag_add_btn"><i class="layui-icon layui-icon-add-circle-fine"></i> 添加标签</button>
+                    </div>
+                    <div class = "form-inline" id="tag_group">
                     </div>
                     <div class="form-inline">
-                        <div class="layui-btn form-control">button</div>
+                        <div class="layui-btn form-control">时间</div>
                         <input class="layui-input form-control" placeholder="test"/>
                     </div>
-                <div class="col-lg-12" style="line-height: 50px;margin-top: 40px">
-                    <aButton id="admin_sign_in_btn" data-title="返回"></aButton>
-                    <aButton id="admin_sign_in_btn2" data-title="保存"></aButton>
+                <div class="col-lg-12" style="line-height: 50px;margin-top: 40px;">
+                    <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-return"></i> 返回</button>
+                    <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-release"></i> 发布</button>
                 </div>
             </div>
         </div>
@@ -81,6 +82,9 @@
 
     .container-fluid {
         height: 100%;
+    }
+    .form-inline{
+        margin-top: 10px;
     }
 
 </style>

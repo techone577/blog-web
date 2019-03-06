@@ -2,19 +2,19 @@ $(function () {
     // $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 
     var md_editor = editormd("my-editormd", {//注意1：这里的就是上面的DIV的id属性值
-        width   : "100%",
+        width: "100%",
         // height  : 800,
-        syncScrolling : "single",
-        path    : "/editor/lib/",//注意2：你的路径
-        onfullscreen : function() {
+        syncScrolling: "single",
+        path: "/editor/lib/",//注意2：你的路径
+        onfullscreen: function () {
             console.log("full");
             $("#right_bar").slideUp();
         },
-        onfullscreenExit  : function() {
+        onfullscreenExit: function () {
             console.log("full");
             $("#right_bar").slideDown();
         },
-        saveHTMLToTextarea : true,//注意3：这个配置，方便post提交表单
+        saveHTMLToTextarea: true,//注意3：这个配置，方便post提交表单
 
         emoji: true,//emoji表情，默认关闭
         taskList: true,
@@ -24,17 +24,17 @@ $(function () {
         flowChart: true,//开启流程图支持，默认关闭
         sequenceDiagram: true,//开启时序/序列图支持，默认关闭,
 
-        dialogLockScreen : false,//设置弹出层对话框不锁屏，全局通用，默认为true
-        dialogShowMask : false,//设置弹出层对话框显示透明遮罩层，全局通用，默认为true
-        dialogDraggable : false,//设置弹出层对话框不可拖动，全局通用，默认为true
-        dialogMaskOpacity : 0.4, //设置透明遮罩层的透明度，全局通用，默认值为0.1
-        dialogMaskBgColor : "#000",//设置透明遮罩层的背景颜色，全局通用，默认为#fff
+        dialogLockScreen: false,//设置弹出层对话框不锁屏，全局通用，默认为true
+        dialogShowMask: false,//设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+        dialogDraggable: false,//设置弹出层对话框不可拖动，全局通用，默认为true
+        dialogMaskOpacity: 0.4, //设置透明遮罩层的透明度，全局通用，默认值为0.1
+        dialogMaskBgColor: "#000",//设置透明遮罩层的背景颜色，全局通用，默认为#fff
 
         codeFold: true,
 
-        imageUpload : true,
-        imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL : "/smart-api/upload/editormdPic/",
+        imageUpload: true,
+        imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+        imageUploadURL: "/smart-api/upload/editormdPic/",
 
         /*上传图片成功后可以做一些自己的处理*/
         onload: function () {
@@ -52,6 +52,19 @@ $(function () {
         previewTheme: "default"
 
     });
+    $("#tag_add_btn").on("click", function () {
+
+        $("#tag_group").append(tagView());
+    })
+
+    function tagView() {
+        return "<div class=\"form-inline\">\n" +
+            "                            <input class=\"layui-input form-control\" placeholder=\"tag\"/>\n" +
+            "                            <button class=\"layui-btn\" onclick=\"$(this).parent().remove()\"><i\n" +
+            "                                    class=\"layui-icon layui-icon-delete\"></i></button>\n" +
+            "                        </div>";
+    }
+
     function ajaxOption(url, data, callback, option) {
         var defaultOption = {
             contentType: "application/json",
@@ -82,16 +95,14 @@ $(function () {
         var rootData = {
             content: md_editor.getMarkdown()
         };
-        ajaxOption(getAction().postSubmit,JSON.stringify(rootData),function (json) {
-            if(json.success){
+        ajaxOption(getAction().postSubmit, JSON.stringify(rootData), function (json) {
+            if (json.success) {
                 window.location.href = getPage().test;
-            }else{
+            } else {
 
             }
         })
     });
-
-
 
 
     function getAction() {
@@ -100,9 +111,10 @@ $(function () {
             postSubmit: "/api/index/post_submit"
         }
     };
+
     function getPage() {
         return {
-            test:"/view/sign/t"
+            test: "/view/sign/t"
         }
     }
 });
