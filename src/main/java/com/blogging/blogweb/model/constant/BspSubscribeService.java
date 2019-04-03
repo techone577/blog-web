@@ -14,7 +14,7 @@ public class BspSubscribeService {
      */
     public static List<String> subscribeList = new ArrayList<String>(){
         {
-            add("blogging.test");
+            add(BSPServiceName.APS_postAdd);
         }
     };
 }

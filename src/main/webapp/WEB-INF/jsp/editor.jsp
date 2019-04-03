@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
+
 <html lang="zh-CN" style="width: 100%;height: 100%">
 <head>
     <meta charset="utf-8">
@@ -20,7 +21,7 @@
 <body class="body-cus">
 <div class="container-fluid">
     <div class="row justify-content-start" style="height: 100%">
-        <div class="col-lg-10">
+        <div class="col-lg-9">
             <div id="my-editormd" style="float: none;">
                 <textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc"
                           style="display:none;"></textarea>
@@ -29,16 +30,16 @@
                 <%--<textarea></textarea>--%>
             </div>
         </div>
-        <div class="col-lg-2" id="right_bar" style="overflow-y: auto;overflow-x:hidden;height: 100%;position: relative">
+        <div class="col-lg-3" id="right_bar" style="overflow-y: auto;overflow-x:hidden;height: 100%;position: relative">
             <div class="row">
                 <div class="col-lg-12" style="float: none;margin-top: 40px">
                     <div class="form-inline">
                         <div class="layui-btn form-control">标题</div>
-                        <input class="layui-input form-control" placeholder="标题"/>
+                        <input class="layui-input form-control" id="release_title" placeholder="标题"/>
                     </div>
                     <div class="form-inline">
                         <div class="layui-btn ">概述</div>
-                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea" style="margin-top: 10px"></textarea>
+                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea" id="release_summary" style="margin-top: 10px"></textarea>
                     </div>
                     <div class="form-inline">
                         <button class="layui-btn" id="tag_add_btn"><i class="layui-icon layui-icon-add-circle-fine"></i> 添加标签</button>
@@ -51,14 +52,14 @@
                     </div>
                 <div class="col-lg-12" style="line-height: 50px;margin-top: 40px;">
                     <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-return"></i> 返回</button>
-                    <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-release"></i> 发布</button>
+                    <button class="layui-btn layui-btn-radius" id="release_btn"><i class="layui-icon layui-icon-release"></i> 发布</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <style>
-    .col-lg-2{
+    .col-lg-3{
         background-color: #CCCCCC;
         color: #333;
         height: 100%;

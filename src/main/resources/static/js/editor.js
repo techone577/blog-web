@@ -59,7 +59,7 @@ $(function () {
 
     function tagView() {
         return "<div class=\"form-inline\">\n" +
-            "                            <input class=\"layui-input form-control\" placeholder=\"tag\"/>\n" +
+            "                            <input class=\"layui-input form-control release_tag\" placeholder=\"tag\"/>\n" +
             "                            <button class=\"layui-btn\" onclick=\"$(this).parent().remove()\"><i\n" +
             "                                    class=\"layui-icon layui-icon-delete\"></i></button>\n" +
             "                        </div>";
@@ -91,24 +91,46 @@ $(function () {
     }
 
     //系统用户登陆
-    $("#post_submit_btn").on("click", function () {
-        var rootData = {
+    // $("#post_submit_btn").on("click", function () {
+    //     var rootData = {
+    //         content: md_editor.getMarkdown()
+    //     };
+    //     ajaxOption(getAction().postSubmit, JSON.stringify(rootData), function (json) {
+    //         if (json.success) {
+    //             window.location.href = getPage().test;
+    //         } else {
+    //
+    //         }
+    //     })
+    // });
+
+    $("#release_btn").on("click", function () {
+        var postData = {
+            memberId: "root",
+            title: $("#release_title").val().trim(),
+            category: "分类",
+            summary: $("#release_summary").val().trim(),
             content: md_editor.getMarkdown()
         };
-        ajaxOption(getAction().postSubmit, JSON.stringify(rootData), function (json) {
+        var tagList = [];
+        $("#tag_group").children().each(function () {
+            var tag = $(this).find(".release_tag").val();
+            tagList.push(tag);
+        })
+        postData.tags = tagList;
+        ajaxOption(getAction().addPost, JSON.stringify(postData), function (json) {
             if (json.success) {
                 window.location.href = getPage().test;
             } else {
-
+                console.log("release fail");
             }
-        })
-    });
+        });
+    })
 
 
     function getAction() {
         return {
-            adminSignIn: "/api/index/sign_in",
-            postSubmit: "/api/index/post_submit"
+            addPost: "/post/add"
         }
     };
 

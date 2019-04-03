@@ -9,4 +9,6 @@ package com.blogging.blogweb.model.constant;
 public class BSPServiceName {
 
     public static final String TEST = "";
+
+    public static final String APS_postAdd= "Blogging.APS.PostController.postAdd";
 }
