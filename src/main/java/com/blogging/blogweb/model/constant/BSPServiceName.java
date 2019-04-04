@@ -10,5 +10,7 @@ public class BSPServiceName {
 
     public static final String TEST = "";
 
-    public static final String APS_postAdd= "Blogging.APS.PostController.postAdd";
+    public static final String APS_postAdd = "Blogging.APS.PostController.postAdd";
+
+    public static final String APS_homePagePostQuery = "Blogging.APS.PostController.HomePageListQuery";
 }

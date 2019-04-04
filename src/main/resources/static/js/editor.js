@@ -120,7 +120,8 @@ $(function () {
         postData.tags = tagList;
         ajaxOption(getAction().addPost, JSON.stringify(postData), function (json) {
             if (json.success) {
-                window.location.href = getPage().test;
+                console.log("release success")
+                //TODO
             } else {
                 console.log("release fail");
             }

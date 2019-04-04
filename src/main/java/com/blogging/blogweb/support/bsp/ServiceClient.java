@@ -52,7 +52,7 @@ public class ServiceClient {
 
     public Response call (String serviceName, String params) {
         String response = excuteCall(serviceName, params);
-        return ResponseBuilder.build(true, response);
+        return ResponseBuilder.buildResult(response);
     }
 
     private String excuteCall (String serviceName, String params) {
@@ -73,7 +73,9 @@ public class ServiceClient {
     private String excuteByMethod (ServiceEntity service, String params) {
         String resp = null;
         String url = Constants.HTTP_PREFIX + service.getIpAddr() + Constants.PATH_SEPERATOR + service.getPort() + service.getRouteAddr();
-        params = Base64Util.encodeToUrlSafeString(params);
+        LOG.info("BSP调用,serviceName:{},route:{},params:{}",service.getServiceName(),url,params);
+        if(null != params)
+            params = Base64Util.encodeToUrlSafeString(params);
         if (RestMethod.POST.equalsIgnoreCase(service.getMethod())) {
             ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, params, String.class);
             resp = responseEntity.getBody();

@@ -6,35 +6,42 @@ $(function () {
 
 
     $("#t_btn").on("click",function () {
-        var t = $("#post_template").clone();
-        t.find(".title").text("this is a test");
-        t.find(".date").text("Dec,39,2018");
-        t.find(".summary").text("this is really a test");
-        t.find(".img").attr("src","/images/orianna_in_the_wood.jpg");
+        // var t = $("#post_template").clone();
+        // t.find(".title").text("this is a test");
+        // t.find(".date").text("Dec,39,2018");
+        // t.find(".summary").text("this is really a test");
+        // t.find(".img").attr("src","/images/orianna_in_the_wood.jpg");
+        //
+        // var tag = $("#tag_template").clone();
+        // tag.text("标签");
+        // tag.attr("href","www.baidu.com");
+        // tag.show();
+        // t.show();
+        // $("#post_container").append(t)
+        // $("#post_tags").append(tag);
 
-        var tag = $("#tag_template").clone();
-        tag.text("标签");
-        tag.attr("href","www.baidu.com");
-        tag.show();
-        t.show();
-        $("#post_container").append(t)
-        $("#post_tags").append(tag);
     })
 
-    function addPost() {
-        var t = $("#post_template").clone();
-        t.find(".title").text("this is a test");
-        t.find(".date").text("Dec,39,2018");
-        t.find(".summary").text("this is really a test");
-        t.find(".img").attr("src","/images/orianna_in_the_wood.jpg");
+    function addPost(data) {
+        for(var p in data) {
+            var post = data[p];
+            var t = $("#post_template").clone();
+            t.find(".title").text(post.title);
+            t.find(".date").text(post.updateTime);
+            t.find(".summary").text(post.summary);
+            t.find(".img").attr("src", "/images/orianna_in_the_wood.jpg");
 
-        var tag = $("#tag_template").clone();
-        tag.text("标签");
-        tag.attr("href","www.baidu.com");
-        tag.show();
-        t.show();
-        $("#post_container").append(t)
-        t.find(".post_tags").append(tag);
+            var tagList = post.tagList;
+            for (var i in tagList) {
+                var tag = $("#tag_template").clone();
+                tag.text(tagList[i]);
+                tag.attr("href", "www.baidu.com");
+                tag.show();
+                t.find(".post_tags").append(tag);
+            }
+            t.show();
+            $("#post_container").append(t)
+        }
     }
 
 
@@ -65,7 +72,23 @@ $(function () {
         $.ajax(defaultOption);
     }
 
+    //loadHomePage
+    ajaxOption(getAction().homePageListQuery, JSON.stringify(null), function (json) {
+        if (json.success) {
+            addPost(json.data);
+        } else {
+            console.log("load fail");
+        }
+    });
 });
+
+
+
+function getAction() {
+    return {
+        homePageListQuery: "/post/homePageQuery"
+    }
+};
 
 //对Date的扩展，将 Date 转化为指定格式的String
 //月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
