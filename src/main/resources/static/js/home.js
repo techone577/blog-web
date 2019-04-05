@@ -4,6 +4,35 @@ $(function () {
 
 
 
+    //上传文件处理
+    $("#submit_btn").on("click", function () {
+
+        //文件格式校验
+        var file = $("#choose_file_btn").val();
+        if (file == "") {
+            notyOption.error("文件不能为空");
+            return false;
+        }
+        //设置表单
+        var form = $("#uploadFileForm");
+        var formData = new FormData($('#uploadFileForm')[0]);
+        $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+        }).success(function (data) {
+        }).error(function () {
+        });
+    });
+    //监听选择文件
+    $("#choose_file_btn").change(function (e) {
+        var file = this.files[0];
+        $("#filename_display").val(file.name);
+
+    });
 
     $("#t_btn").on("click",function () {
         // var t = $("#post_template").clone();

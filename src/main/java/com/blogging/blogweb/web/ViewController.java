@@ -40,4 +40,9 @@ public class ViewController {
     public String getSearch(){
         return "search";
     }
+
+    @RequestMapping(value = "/a")
+    public String geta(){
+        return "a";
+    }
 }

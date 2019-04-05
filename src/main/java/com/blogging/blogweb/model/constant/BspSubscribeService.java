@@ -16,6 +16,7 @@ public class BspSubscribeService {
         {
             add(BSPServiceName.APS_postAdd);
             add(BSPServiceName.APS_homePagePostQuery);
+            add(BSPServiceName.APS_imageUpload);
         }
     };
 }
