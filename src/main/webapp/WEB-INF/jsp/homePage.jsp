@@ -5,13 +5,13 @@
     <title>
         /网站小窗口名字
     </title>
-    <link rel="canonical" href="https://orianna-zzo.github.io/">
+    <link rel="canonical" href="/view/blog/home">
     <link rel="shortcut icon"
     <%--/小窗口旁边logo--%>
     />
 
     <link href="/css/home/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+    <%--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">--%>
     <link href="/css/home/font.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/home/mdb.min.css" rel="stylesheet">
@@ -35,8 +35,8 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
         <%--商标logo--%>
-        <a class="navbar-brand" href="https://orianna-zzo.github.io/">
-            <img class="avatar" src="https://orianna-zzo.github.io/img/zheng.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <a class="navbar-brand" href="/view/home/blog">
+            <img class="avatar" src="" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
             <strong> TECHONE</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -88,28 +88,28 @@
     <%--背景jpg--%>
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-            <div class="view" style="background-image: url('https://orianna-zzo.github.io/img/header-slides/fan.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view" style="background-image: url('/images/bg/fan.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('https://orianna-zzo.github.io/img/header-slides/in_the_mirror.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view" style="background-image: url('/images/bg/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('https://orianna-zzo.github.io/img/header-slides/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view" style="background-image: url('/images/bg/mirror.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('https://orianna-zzo.github.io/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view" style="background-image: url('/images/bg/sea.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
@@ -117,7 +117,7 @@
 
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('https://orianna-zzo.github.io/img/header-slides/raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view" style="background-image: url('/images/bg/woods.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
@@ -131,7 +131,7 @@
         <div class="row mx-0 headfont mb-5 pb-3">
             <div class="col-12 col-sm-5 align-middle">
                 <a href="https://orianna-zzo.github.io/">
-                    <img class="pull-right avatar avatar-lg " src="https://orianna-zzo.github.io/img/profile.jpg" alt="" >
+                    <img class="pull-right avatar avatar-lg " src="" alt="" >
                 </a>
             </div>
             <div class="col-12 col-sm-7 text-left pl-5">
@@ -384,7 +384,7 @@
                         <a href="https://orianna-zzo.github.io/series/%E8%A7%82%E5%90%8Erepo">
 
                             <div class="view view-cascade overlay">
-                                <img class="card-img-top" src="https://orianna-zzo.github.io/images/series/%E8%A7%82%E5%90%8Erepo/theatre.jpg" >
+                                <img class="card-img-top" src="/images/bg/fan.jpg" >
 
                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
 
@@ -412,7 +412,7 @@
                         <a href="https://orianna-zzo.github.io/series/%E5%89%8D%E7%AB%AF%E8%AF%95%E6%B0%B4">
 
                             <div class="view view-cascade overlay">
-                                <img class="card-img-top" src="https://orianna-zzo.github.io/images/series/%E5%89%8D%E7%AB%AF%E8%AF%95%E6%B0%B4/web.jpg" >
+                                <img class="card-img-top" src="/images/bg/fan.jpg" >
 
                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
 
@@ -440,7 +440,7 @@
                         <a href="https://orianna-zzo.github.io/series/%E6%85%A2%E5%AD%A6docker">
 
                             <div class="view view-cascade overlay">
-                                <img class="card-img-top" src="https://orianna-zzo.github.io/images/series/%E6%85%A2%E5%AD%A6Docker/docker.png" >
+                                <img class="card-img-top" src="/images/bg/fan.jpg" >
 
                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
 
@@ -468,7 +468,7 @@
                         <a href="https://orianna-zzo.github.io/series/mac%E5%B0%8F%E7%99%BD%E6%8E%A2%E7%B4%A2%E8%AE%B0">
 
                             <div class="view view-cascade overlay">
-                                <img class="card-img-top" src="https://orianna-zzo.github.io/images/series/Mac%E5%B0%8F%E7%99%BD%E6%8E%A2%E7%B4%A2%E8%AE%B0/explore.jpg" >
+                                <img class="card-img-top" src="/images/bg/fan.jpg" >
 
                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
 
@@ -518,7 +518,7 @@
                         </div>
 
                         <div class="view">
-                            <img src="https://orianna-zzo.github.io/images/series/%E8%A7%82%E5%90%8Erepo/2018-09/les-mis-ad.jpg" />
+                            <img src="/images/bg/fan.jpg" />
                         </div>
                         2018年9月28日 19:30 上海文化广场 《Les Miserable》法语音乐会。舞台的灯光还是非常炫的，很有25周年的灯光感觉。各种类型的光交织显得朴素的舞台十分华丽。街口枪战也还原了25周年版感受到的那种无声的硝烟。最惊艳的是沙威身亡那一刻的逆光设计，真是美到爆。法语虽然没英语熟悉，但是也很好听。演员们的演唱功力都特别赞，十分值得。
 
@@ -561,7 +561,7 @@
 
 <%-- 文章展示模板 --%>
 <div class="post-wrapper white-bg post-card" id="post_template" style="display: none">
-    <a class="a" href="https://orianna-zzo.github.io/blog/2018-09/%E8%88%9E%E5%89%A7cinderellarepo/">
+    <a class="a" href="">
         <div class="post-header text-center">
             <div class="px-4 post-heading title">题目</div>
             <ul class="post-meta li-x mt-1">
@@ -613,7 +613,7 @@
 </div>
 
 <%--tag模板--%>
-<li><a id = "tag_template" href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button" style="display: none">名称 </a></li>
+<li><a class="home_tag" id = "tag_template" href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button" style="display: none">名称 </a></li>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
     <div class="pb-2 mt-5 pt-5">
@@ -623,7 +623,7 @@
         <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
     </div>
     <div class="copyright py-4">
-        <span>  2016 - 2018 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+        <span>  2019 - NOW &copy; | Theme <a href='https://github.com/techone577' target="_blank">Blogging</a> by <a href='https://github.com/techone577' target="_blank">TechOne</a>  </span>
     </div>
 
 

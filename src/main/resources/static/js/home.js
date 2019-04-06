@@ -54,7 +54,7 @@ $(function () {
     function addPost(data) {
         for(var p in data) {
             var post = data[p];
-            var t = $("#post_template").clone();
+            var t = $("#post_template").clone().removeAttr("id");
             t.find(".title").text(post.title);
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
@@ -72,7 +72,6 @@ $(function () {
             $("#post_container").append(t)
         }
     }
-
 
 
 

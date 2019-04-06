@@ -15,4 +15,6 @@ public class BSPServiceName {
     public static final String APS_homePagePostQuery = "Blogging.APS.PostController.HomePageListQuery";
 
     public static final String APS_imageUpload = "Blogging.APS.ImageController.upload";
+
+    public static final String APS_blogQuery = "Blogging.APS.PostController.query";
 }

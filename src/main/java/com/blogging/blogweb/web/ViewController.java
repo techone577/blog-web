@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2018/11/6
  */
 @Controller
-@RequestMapping(value = "/view/sign")
+@RequestMapping(value = "/view/blog")
 public class ViewController {
 
     @RequestMapping(value = "/index")
@@ -41,8 +41,9 @@ public class ViewController {
         return "search";
     }
 
-    @RequestMapping(value = "/a")
+    @RequestMapping(value = "/display")
     public String geta(){
-        return "a";
+        return "postDisplay";
     }
+
 }
