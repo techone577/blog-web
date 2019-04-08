@@ -16,8 +16,14 @@ $(function () {
             tag.show();
             $("#blog_tags").append(tag);
         }
-        $("#previous_blog_title").text(data.previousPost.title);
-        $("#next_blog_title").text(data.nextPost.title);
+        if(null != data.previousPost) {
+            $("#previous_blog_title").text(data.previousPost.title);
+            $("#previous_href").attr("href",getView().display+"?id="+data.previousPost.postId);
+        }
+        if(null != data.nextPost) {
+            $("#next_blog_title").text(data.nextPost.title);
+            $("#next_href").attr("href",getView().display+"?id="+data.nextPost.postId);
+        }
     }
 
 
@@ -46,11 +52,11 @@ $(function () {
         $.ajax(defaultOption);
     }
 
-    var t = {
-        postId: "PO23383038445276364819044"
-    }
-    //loadHomePage
-    ajaxOption(getAction().queryBlog, JSON.stringify(t), function (json) {
+    var displayParam = {
+        postId: window.location.search.split("=")[1]
+    };
+    //加载blog
+    ajaxOption(getAction().queryBlog, JSON.stringify(displayParam), function (json) {
         if (json.success) {
             showBlog(json.data);
         } else {
@@ -66,6 +72,13 @@ function getAction() {
         queryBlog: "/post/queryBlog"
     }
 };
+
+function getView() {
+    return {
+        display: "display"
+    }
+};
+
 
 //对Date的扩展，将 Date 转化为指定格式的String
 //月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，

@@ -3,6 +3,7 @@ package com.blogging.blogweb.web;
 
 import com.blogging.blogweb.model.constant.BSPServiceName;
 import com.blogging.blogweb.model.entity.PostAddReqEntity;
+import com.blogging.blogweb.model.entity.PostListQueryDTO;
 import com.blogging.blogweb.model.entity.PostQueryDTO;
 import com.blogging.blogweb.model.entity.Response;
 import com.blogging.blogweb.support.bsp.ServiceClient;
@@ -51,6 +52,16 @@ public class PostController {
     @RequestMapping(value = "/queryBlog",method = RequestMethod.POST)
     public Response homePageQuery(@RequestBody PostQueryDTO queryDTO){
         Response resp = serviceClient.call(BSPServiceName.APS_blogQuery,JsonUtil.toString(queryDTO));
+        return resp;
+    }
+
+    /**
+     * 分页查询
+     */
+    @ResponseBody
+    @RequestMapping(value = "/queryPostList",method = RequestMethod.POST)
+    public Response queryPostList(@RequestBody PostListQueryDTO queryDTO){
+        Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery,JsonUtil.toString(queryDTO));
         return resp;
     }
 }

@@ -3,56 +3,24 @@ $(function () {
 
 
 
-
-    //上传文件处理
-    $("#submit_btn").on("click", function () {
-
-        //文件格式校验
-        var file = $("#choose_file_btn").val();
-        if (file == "") {
-            notyOption.error("文件不能为空");
-            return false;
-        }
-        //设置表单
-        var form = $("#uploadFileForm");
-        var formData = new FormData($('#uploadFileForm')[0]);
-        $.ajax({
-            type: form.attr('method'),
-            url: form.attr('action'),
-            data: formData,
-            cache: false,
-            processData: false,
-            contentType: false,
-        }).success(function (data) {
-        }).error(function () {
-        });
-    });
-    //监听选择文件
-    $("#choose_file_btn").change(function (e) {
-        var file = this.files[0];
-        $("#filename_display").val(file.name);
-
-    });
-
     function addPost(data) {
         for(var p in data) {
             var post = data[p];
-            var t = $("#post_template").clone().attr("id",post.postId);
+            var t = $("#post_list_post_template").clone().attr("id",post.postId);
             t.find(".title").text(post.title);
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
-            t.find(".img").attr("src", "/images/orianna_in_the_wood.jpg");
 
             var tagList = post.tagList;
             for (var i in tagList) {
-                var tag = $("#tag_template").clone();
+                var tag = $("#post_list_tag_template").clone();
                 tag.text(tagList[i]);
                 tag.attr("href", "www.baidu.com");
                 tag.show();
                 t.find(".post_tags").append(tag);
             }
             t.show();
-            $("#post_container").append(t);
+            $("#post_list_post_container").append(t);
             t.on("click", function () {
                 window.location.href = getView().display + "?id=" + $(this).attr("id");
             });
@@ -86,7 +54,7 @@ $(function () {
         $.ajax(defaultOption);
     }
 
-    //loadHomePage
+    //loadPostList
     ajaxOption(getAction().homePageListQuery, JSON.stringify(null), function (json) {
         if (json.success) {
             addPost(json.data);

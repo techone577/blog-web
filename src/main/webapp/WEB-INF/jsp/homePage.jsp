@@ -35,7 +35,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
         <%--商标logo--%>
-        <a class="navbar-brand" href="/view/home/blog">
+        <a class="navbar-brand" href="/view/blog/home">
             <img class="avatar" src="" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
             <strong> TECHONE</strong>
         </a>
@@ -500,7 +500,6 @@
 
         <%--main 文章--%>
         <div class="col-md-9 mt-3">
-            <button id="t_btn">hello</button>
             <div id="post_container">
 
                 <div class="post-wrapper white-bg post-card">
@@ -561,7 +560,7 @@
 
 <%-- 文章展示模板 --%>
 <div class="post-wrapper white-bg post-card" id="post_template" style="display: none">
-    <a class="a" href="">
+    <a class="a">
         <div class="post-header text-center">
             <div class="px-4 post-heading title">题目</div>
             <ul class="post-meta li-x mt-1">
@@ -580,7 +579,7 @@
 
     <div class="post-meta li-x mt-2 div-x">
         <%-- 所属series--%>
-        <div>
+        <div id="home_post_series_container">
             <li><a href="https://orianna-zzo.github.io/categories/%E5%93%81%E9%89%B4%E8%AF%84%E8%AE%BA"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 品鉴评论 </a></li>
             <li><a href="https://orianna-zzo.github.io/series/%E8%A7%82%E5%90%8Erepo"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>观后repo</a></li>
 
@@ -613,7 +612,7 @@
 </div>
 
 <%--tag模板--%>
-<li><a class="home_tag" id = "tag_template" href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button" style="display: none">名称 </a></li>
+<li><a class="home_tag" id = "tag_template" role="button" style="display: none">名称 </a></li>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
     <div class="pb-2 mt-5 pt-5">

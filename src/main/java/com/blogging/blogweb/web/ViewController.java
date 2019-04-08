@@ -42,8 +42,14 @@ public class ViewController {
     }
 
     @RequestMapping(value = "/display")
-    public String geta(){
+    public String getDisplay(){
         return "postDisplay";
     }
+
+    @RequestMapping(value = "/postlist")
+    public String getPostList(){
+        return "postlist";
+    }
+
 
 }

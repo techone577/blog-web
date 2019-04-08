@@ -59,11 +59,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/">Home</a>
+                    <a class="nav-link" href="/view/blog/home">Home</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/sci-tech/">Sci-Tech </a>
+                    <a class="nav-link" href="https://orianna-zzo.github.io/sci-tech/">LeetCode </a>
                 </li>
 
                 <li class="nav-item ">
@@ -237,22 +237,22 @@
                     </div>
                 </div>
                 <%--上一篇、下一篇--%>
-                <div class="row pt-3">
+                <div class="row pt-3" id="blog_display_nav">
                     <%--上一篇--%>
                     <div class="col-md-6">
-                        <a id="previos_href" class="post-meta">Previous
+                        <a id="previous_href" class="post-meta">上一篇
                             <div class="pt-2 pb-5 d-flex">
                                 <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                                <span id="previous_blog_title">弗朗明戈舞剧《塞维利亚组曲》repo</span>
+                                <span id="previous_blog_title">无</span>
                             </div>
                         </a>
                     </div>
                     <%--下一篇--%>
                     <div class="col-md-6 text-right">
-                        <a id="next_href" class="post-meta">Next
+                        <a id="next_href" class="post-meta">下一篇
                             <div class="pt-2 pb-5 flex-reverse">
                                 <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                                <span id="next_blog_title">中文音乐剧《拉赫玛尼诺夫》repo</span>
+                                <span id="next_blog_title">无</span>
                             </div>
                         </a>
                     </div>
