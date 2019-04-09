@@ -45,11 +45,8 @@ $(function () {
 
             var tagList = post.tagList;
             for (var i in tagList) {
-                var tag = $("#tag_template").clone();
-                tag.text(tagList[i]);
-                tag.attr("href", "www.baidu.com");
-                tag.show();
-                t.find(".post_tags").append(tag);
+                var li = buildTag(tagList[i]);
+                t.find(".post_tags").append(li);
             }
             t.show();
             $("#post_container").append(t);
@@ -57,6 +54,33 @@ $(function () {
                 window.location.href = getView().display + "?id=" + $(this).attr("id");
             });
         }
+    }
+
+    function addTags(data){
+        for(var t in data){
+            var info = data[t].tagName + "("+data[t].tagNum+")";
+            var li = buildTag(info);
+            $("#tag_info_list").append(li);
+        }
+    }
+
+    function buildTag(text) {
+        var li = $("#tag_template").clone().removeAttr("id");
+        var tag = li.find(".home_tag");
+        tag.text(text);
+        tag.on("click", function (e) {
+
+            var tagName = $(this).text().trim()
+            if (tagName.indexOf("(") >= 0) {
+                tagName = tagName.split("(")[0];
+            }
+            //阻止冒泡
+            e.stopPropagation();
+            window.location.href = getView().postList + "?tag=" + tagName;
+
+        })
+        tag.show();
+        return li;
     }
 
 
@@ -86,10 +110,14 @@ $(function () {
         $.ajax(defaultOption);
     }
 
+    var params = {
+        type : "home"
+    }
     //loadHomePage
-    ajaxOption(getAction().homePageListQuery, JSON.stringify(null), function (json) {
+    ajaxOption(getAction().homePageListQuery, JSON.stringify(params), function (json) {
         if (json.success) {
-            addPost(json.data);
+            addPost(json.data.homePagePostList);
+            addTags(json.data.tagInfoList);
         } else {
             console.log("load fail");
         }
@@ -100,13 +128,14 @@ $(function () {
 
 function getAction() {
     return {
-        homePageListQuery: "/post/homePageQuery"
+        homePageListQuery: "/post//queryPostList"
     }
 };
 
 function getView() {
     return {
-        display: "display"
+        display : "display",
+        postList : "postlist"
     }
 }
 

@@ -209,9 +209,7 @@
                     </a>
                 </div>
 
-                <div class="li-x post-meta tags-md" id="post_list_tags" style="margin-left: -8px;">
-
-                    <li><a href="https://orianna-zzo.github.io/tags/blog" role="button"><span>blog (16)</span></a></li>
+                <div class="li-x post-meta tags-md" id="post_list_tag_infos" style="margin-left: -8px;">
 
                 </div>
             </div>
@@ -240,14 +238,9 @@
             <ul>
                 <div class="div-x">
                     <div class='post-heading' id="post_list_title">
-
-                        Sci-tech
-
                     </div>
-
-                    <div class="px-2 middot" id="post_list_amount"></div>
-                    <div>
-                        32 posts
+                    <div class="px-2 middot"></div>
+                    <div id="post_list_amount">
                     </div>
                 </div>
 
@@ -330,7 +323,7 @@
     </div>
 
 </div>
-<li><a role="button" id="post_list_tag_template" style="display: none"> </a></li>
+<li id = "post_list_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 

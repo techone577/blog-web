@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/post")
@@ -39,8 +37,8 @@ public class PostController {
      */
     @ResponseBody
     @RequestMapping(value = "/homePageQuery",method = RequestMethod.POST)
-    public Response homePageQuery(){
-        Response resp = serviceClient.call(BSPServiceName.APS_homePagePostQuery,null);
+    public Response homePageQuery(@RequestBody PostListQueryDTO queryDTO){
+        Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery,null);
         return resp;
     }
 
@@ -50,7 +48,7 @@ public class PostController {
      */
     @ResponseBody
     @RequestMapping(value = "/queryBlog",method = RequestMethod.POST)
-    public Response homePageQuery(@RequestBody PostQueryDTO queryDTO){
+    public Response queryBlog(@RequestBody PostQueryDTO queryDTO){
         Response resp = serviceClient.call(BSPServiceName.APS_blogQuery,JsonUtil.toString(queryDTO));
         return resp;
     }

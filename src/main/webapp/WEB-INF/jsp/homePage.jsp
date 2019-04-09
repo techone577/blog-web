@@ -184,11 +184,6 @@
 
 </div>
 
-<script>
-    $(function(){
-        $('#site-header').carousel({interval:1000});
-    })
-</script>
 
 <section class="container pt-5 text-center">
     <h1 class="display-3">Hello, World!</h1>
@@ -273,67 +268,7 @@
                     </a>
                 </div>
                 <%--tags--%>
-                <div class="li-x post-meta tags-md" style="margin-left: -8px;">
-
-                    <li><a href="https://orianna-zzo.github.io/tags/blog" role="button"><span>blog (16)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E5%89%8D%E7%AB%AF" role="button"><span>前端 (9)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/hugo" role="button"><span>hugo (7)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/css" role="button"><span>css (6)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/docker" role="button"><span>docker (6)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button"><span>文广 (6)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/musical" role="button"><span>musical (5)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E6%9C%9F%E5%BE%85%E7%9A%84show" role="button"><span>期待的show (5)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" role="button"><span>环境配置 (5)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/bootstrap" role="button"><span>bootstrap (3)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/mac" role="button"><span>mac (3)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/js" role="button"><span>js (2)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/python" role="button"><span>python (2)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/%E8%88%9E%E5%89%A7" role="button"><span>舞剧 (2)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/alpine" role="button"><span>alpine (1)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/bash" role="button"><span>bash (1)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/bug" role="button"><span>bug (1)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/carousel" role="button"><span>carousel (1)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/conda" role="button"><span>conda (1)</span></a></li>
-
-
-                    <li><a href="https://orianna-zzo.github.io/tags/dockerfile" role="button"><span>dockerfile (1)</span></a></li>
-
+                <div class="li-x post-meta tags-md" id="tag_info_list" style="margin-left: -8px;">
 
                 </div>
             </div>
@@ -612,7 +547,7 @@
 </div>
 
 <%--tag模板--%>
-<li><a class="home_tag" id = "tag_template" role="button" style="display: none">名称 </a></li>
+<li id = "tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
     <div class="pb-2 mt-5 pt-5">
@@ -642,6 +577,12 @@
 <script type="text/javascript">
 
     new WOW().init();
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        $('#site-header').carousel({interval:3000});
+    })
 </script>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

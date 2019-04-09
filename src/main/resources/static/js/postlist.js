@@ -2,7 +2,6 @@ $(function () {
     // $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 
 
-
     function addPost(data) {
         for(var p in data) {
             var post = data[p];
@@ -13,11 +12,8 @@ $(function () {
 
             var tagList = post.tagList;
             for (var i in tagList) {
-                var tag = $("#post_list_tag_template").clone();
-                tag.text(tagList[i]);
-                tag.attr("href", "www.baidu.com");
-                tag.show();
-                t.find(".post_tags").append(tag);
+                var li = buildTag(tagList[i])
+                t.find(".post_tags").append(li);
             }
             t.show();
             $("#post_list_post_container").append(t);
@@ -25,6 +21,33 @@ $(function () {
                 window.location.href = getView().display + "?id=" + $(this).attr("id");
             });
         }
+    }
+
+    function addTags(data){
+        for(var t in data){
+            var info = data[t].tagName + "("+data[t].tagNum+")";
+            var li = buildTag(info);
+            $("#post_list_tag_infos").append(li);
+        }
+    }
+
+    function buildTag(text) {
+        var li = $("#post_list_tag_template").clone().removeAttr("id");
+        var tag = li.find(".home_tag");
+        tag.text(text);
+        tag.on("click", function (e) {
+
+            var tagName = $(this).text().trim()
+            if (tagName.indexOf("(") >= 0) {
+                tagName = tagName.split("(")[0];
+            }
+            //阻止冒泡
+            e.stopPropagation();
+            window.location.href = "?tag=" + tagName;
+
+        })
+        tag.show();
+        return li;
     }
 
 
@@ -54,10 +77,26 @@ $(function () {
         $.ajax(defaultOption);
     }
 
+    var param = {
+        lastMinId : 65535,
+        pageSize : 5,
+        type : "all"
+    };
+    var type = window.location.search.split("=")[0].replace("?","");
+    if(null != type && type == "tag"){
+        param.type = "tag"
+        param.typeValue = window.location.search.split("=")[1];
+        $("#post_list_title").text(param.typeValue);
+    }
+    if(param.type == "all"){
+        $("#post_list_title").text(param.type);
+    }
     //loadPostList
-    ajaxOption(getAction().homePageListQuery, JSON.stringify(null), function (json) {
+    ajaxOption(getAction().postListQuery, JSON.stringify(param), function (json) {
         if (json.success) {
-            addPost(json.data);
+            addPost(json.data.postList);
+            addTags(json.data.tagInfoList);
+            $("#post_list_amount").text(json.data.totalNum+" posts");
         } else {
             console.log("load fail");
         }
@@ -68,7 +107,7 @@ $(function () {
 
 function getAction() {
     return {
-        homePageListQuery: "/post/homePageQuery"
+        postListQuery: "/post/queryPostList"
     }
 };
 
