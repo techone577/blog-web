@@ -263,82 +263,82 @@
 
             <div id="page-scrollspy" class="toc-nav">
 
-                <ul class="nav nav-pills ml-0">
+                <ul class="nav nav-pills ml-0" id="post_display_TOC">
 
                     <li class="nav-item pb-3 text-center">
                         <span class="font-weight-bold mb-2">- CATALOG - </span>
                     </li>
 
 
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#%e8%a7%82%e5%89%a7%e6%a1%a3%e6%a1%88">
-                                观剧档案
-                            </a>
-                        </li>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<li class="nav-item">--%>
+                            <%--<a class="nav-link" href="#%e8%a7%82%e5%89%a7%e6%a1%a3%e6%a1%88">--%>
+                                <%--观剧档案--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
 
 
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#repo">
-                                Repo
-                            </a>
-                        </li>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<li class="nav-item">--%>
+                            <%--<a class="nav-link" href="#repo">--%>
+                                <%--Repo--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
 
 
-                    <ul class="nav">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#%e4%bd%8d%e7%bd%ae">
-                                    位置
-                                </a>
-                            </li>
-                        </ul>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li class="nav-item">--%>
+                                <%--<a class="nav-link" href="#%e4%bd%8d%e7%bd%ae">--%>
+                                    <%--位置--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</ul>--%>
 
 
-                    <ul class="nav">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#%e8%88%9e%e7%be%8e">
-                                    舞美
-                                </a>
-                            </li>
-                        </ul>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li class="nav-item">--%>
+                                <%--<a class="nav-link" href="#%e8%88%9e%e7%be%8e">--%>
+                                    <%--舞美--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</ul>--%>
 
 
-                    <ul class="nav">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#%e8%a1%a8%e6%bc%94">
-                                    表演
-                                </a>
-                            </li>
-                        </ul>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li class="nav-item">--%>
+                                <%--<a class="nav-link" href="#%e8%a1%a8%e6%bc%94">--%>
+                                    <%--表演--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</ul>--%>
 
 
-                    <ul class="nav">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#%e5%85%b6%e4%bb%96">
-                                    其他
-                                </a>
-                            </li>
-                        </ul>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li class="nav-item">--%>
+                                <%--<a class="nav-link" href="#%e5%85%b6%e4%bb%96">--%>
+                                    <%--其他--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</ul>--%>
 
 
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6">
-                                版本控制
-                            </a>
-                        </li>
-                    </ul>
+                    <%--<ul class="nav">--%>
+                        <%--<li class="nav-item">--%>
+                            <%--<a class="nav-link" href="#%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6">--%>
+                                <%--版本控制--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
                 </ul>
             </div>
 

@@ -9,6 +9,8 @@ $(function () {
         $('pre code').each(function(i, block) {
             hljs.highlightBlock(block);
         });
+        //添加TOC
+        $("#post_display_TOC").append(data.toc);
         var tagList = data.tagList;
         for (var i in tagList) {
             var li = buildTag(tagList[i]);

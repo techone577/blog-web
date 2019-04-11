@@ -435,54 +435,6 @@
         <div class="col-md-9 mt-3">
             <div id="post_container">
 
-                <div class="post-wrapper white-bg post-card">
-
-                    <a href="https://orianna-zzo.github.io/blog/2018-09/les-miserable%E6%B3%95%E8%AF%AD%E9%9F%B3%E4%B9%90%E4%BC%9Arepo/">
-                        <div class="post-header text-center">
-                            <%--文章标题、信息、梗概--%>
-                            <div class="px-4 post-heading">《Les Miserable》法语音乐会repo</div>
-                            <ul class="post-meta li-x mt-1">
-                                <li>Sep 30, 2018</li>
-                                <li class="middot"></li>
-                                <li>2 minutes read</li>
-
-                            </ul>
-                        </div>
-
-                        <div class="view">
-                            <img src="/images/bg/fan.jpg" />
-                        </div>
-                        2018年9月28日 19:30 上海文化广场 《Les Miserable》法语音乐会。舞台的灯光还是非常炫的，很有25周年的灯光感觉。各种类型的光交织显得朴素的舞台十分华丽。街口枪战也还原了25周年版感受到的那种无声的硝烟。最惊艳的是沙威身亡那一刻的逆光设计，真是美到爆。法语虽然没英语熟悉，但是也很好听。演员们的演唱功力都特别赞，十分值得。
-
-                    </a>
-
-                    <div class="post-meta li-x mt-2 div-x">
-                        <div>
-
-                            <li><a href="https://orianna-zzo.github.io/categories/%E5%93%81%E9%89%B4%E8%AF%84%E8%AE%BA"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 品鉴评论 </a></li>
-
-                            <li><a href="https://orianna-zzo.github.io/series/%E8%A7%82%E5%90%8Erepo"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>观后repo</a></li>
-
-                        </div>
-
-                        <div>
-
-                            <div class="li-x div-x post-meta">
-                                <li class="pr-0"><a href="https://orianna-zzo.github.io/tags/"><i class="fas fa-tags"></i></a></li>
-                                <div class="tags-sm">
-
-                                    <li><a href="https://orianna-zzo.github.io/tags/%E6%9C%9F%E5%BE%85%E7%9A%84show" role="button">期待的show </a></li>
-
-                                    <li><a href="https://orianna-zzo.github.io/tags/%E6%96%87%E5%B9%BF" role="button">文广 </a></li>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
 
         </div>
