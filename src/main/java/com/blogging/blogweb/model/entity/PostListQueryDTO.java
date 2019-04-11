@@ -2,7 +2,7 @@ package com.blogging.blogweb.model.entity;
 
 public class PostListQueryDTO {
 
-    private Integer lastMinId;
+    private Integer pageNum;
 
     private Integer pageSize;
 
@@ -11,16 +11,18 @@ public class PostListQueryDTO {
 
     private String typeValue;
 
-    public Integer getLastMinId() {
-        return lastMinId;
-    }
 
-    public void setLastMinId(Integer lastMinId) {
-        this.lastMinId = lastMinId;
-    }
 
     public Integer getPageSize() {
         return pageSize;
+    }
+
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 
     public void setPageSize(Integer pageSize) {

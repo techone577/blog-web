@@ -8,13 +8,10 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
 
-    <title>
-
-        Sci-tech | TECHONE
-
+    <title id="post_list_head_title">
     </title>
 
-    <link rel="canonical" href="https://orianna-zzo.github.io/sci-tech/">
+    <link rel="canonical" href="">
 
     <link href="/css/home/all.min.css" rel="stylesheet">
     <link href="/css/home/font.css" rel="stylesheet">
@@ -22,13 +19,10 @@
     <link href="/css/home/mdb.min.css" rel="stylesheet">
     <link href="/css/home/style.min.css" rel="stylesheet">
     <link href="/css/home/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/layui/css/layui.css"/>
     <link rel="stylesheet" href="/css/home/github-gist.css">
 
-    <link rel="shortcut icon"
-
-          href=""
-
-    >
+    <link rel="shortcut icon" href="/images/avatar/avatar.jpeg">
 
     <style type="text/css">
         @media (min-width: 800px) and (max-width: 850px) {
@@ -66,12 +60,12 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/sci-tech/" >LeetCode  </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=leetcode" >LeetCode  </a>
                 </li>
 
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/blog/" >Blog  </a>
+                    <a class="nav-link" href="/view/blog/postlist" >Blog  </a>
                 </li>
 
 
@@ -130,15 +124,15 @@
         <div class="row mx-0 headfont mt-3 pt-4">
 
             <div class="col-12 col-sm-5 align-middle">
-                <a href="https://orianna-zzo.github.io/">
+                <a href="/view/blog/home">
 
-                    <img class="pull-right avatar avatar-md" src="" alt="" >
+                    <img class="pull-right avatar avatar-md" src="/images/avatar/avatar.jpeg" alt="" >
 
                 </a>
             </div>
 
             <div class="col-12 col-sm-7 text-left pl-2">
-                <a href="https://orianna-zzo.github.io/">
+                <a href="/view/blog/home">
                     <h1 class="mb-2 h1" style="font-weight: 300;" >
                         <strong>TECHONE</strong>
                     </h1>
@@ -146,13 +140,13 @@
 
                 <div class="mt-2" style="font-size: 1rem; color: white;">
 
-                    <a href="//github.com/orianna-zzo" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
+                    <a href="https://github.com/techon577" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
 
-                    <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1" aria-hidden="true"></i></a>
 
                     <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
 
-                    <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+                    <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -246,39 +240,14 @@
 
             </ul>
             <div id="post_list_post_container">
-                <div class="pagination pagination-outline justify-content-end active-color">
-
-                    <%--分页--%>
-                    <ul class="pagination">
-
-                        <li class="page-item">
-                            <a href="https://orianna-zzo.github.io/sci-tech/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-                        </li>
-
-                        <li class="page-item disabled">
-                            <a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-                        </li>
-
-                        <li class="page-item active"><a class="page-link" href="https://orianna-zzo.github.io/sci-tech/">1</a></li>
-
-                        <li class="page-item"><a class="page-link" href="https://orianna-zzo.github.io/sci-tech/page/2/">2</a></li>
-
-                        <li class="page-item"><a class="page-link" href="https://orianna-zzo.github.io/sci-tech/page/3/">3</a></li>
-
-                        <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
-
-                        <li class="page-item"><a class="page-link" href="https://orianna-zzo.github.io/sci-tech/page/7/">7</a></li>
-
-                        <li class="page-item">
-                            <a href="https://orianna-zzo.github.io/sci-tech/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-                        </li>
-
-                        <li class="page-item">
-                            <a href="https://orianna-zzo.github.io/sci-tech/page/7/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-                        </li>
-
-                    </ul>
-
+                <%--<div class="pagination pagination-outline justify-content-end active-color">--%>
+                    <%--&lt;%&ndash;分页&ndash;%&gt;--%>
+                    <%--<ul class="pagination">--%>
+                    <%--</ul>--%>
+                <%--</div>--%>
+                <div style="overflow:hidden;padding:0 2%;">
+                    <div id="lay-page" style="float:right">
+                    </div>
                 </div>
 
             </div>
@@ -356,6 +325,7 @@
 <script type="text/javascript" src="/js/bootstrap.js"></script>
 <script type="text/javascript" src="/js/home/mdb.min.js"></script>
 <script type="text/javascript" src="/js/home/main.js"></script>
+<script type="text/javascript" src="/layui/layui.all.js"></script>
 <script src="/js/home/highlight.pack.js"></script>
 <script src="/js/postlist.js"></script>
 

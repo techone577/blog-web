@@ -3,12 +3,10 @@
 <html lang="zh-Hans">
 <head>
     <title>
-        /网站小窗口名字
+        TECHONE
     </title>
     <link rel="canonical" href="/view/blog/home">
-    <link rel="shortcut icon"
-    <%--/小窗口旁边logo--%>
-    />
+    <link rel="shortcut icon" href="/images/avatar/avatar.jpeg"/>
 
     <link href="/css/home/all.min.css" rel="stylesheet">
     <%--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">--%>
@@ -47,13 +45,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item  active ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/view/blog/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/sci-tech/" >Li-Tech  </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=leetcode" >LeetCode  </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/blog/" >Blog  </a>
+                    <a class="nav-link" href="/view/blog/postlist" >Blog  </a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="https://orianna-zzo.github.io/about/" >About  </a>
@@ -130,12 +128,12 @@
     <div class="carousel-content text-center white-text wow fadeIn">
         <div class="row mx-0 headfont mb-5 pb-3">
             <div class="col-12 col-sm-5 align-middle">
-                <a href="https://orianna-zzo.github.io/">
-                    <img class="pull-right avatar avatar-lg " src="" alt="" >
+                <a href="/view/blog/home">
+                    <img class="pull-right avatar avatar-lg " src="/images/avatar/avatar.jpeg" alt="" >
                 </a>
             </div>
             <div class="col-12 col-sm-7 text-left pl-5">
-                <a href="https://orianna-zzo.github.io/">
+                <a href="/view/blog/home">
                     <h1 class="display-4 mb-2 mt-2 h1">
                         <strong>TECHONE_DUAN</strong>
                     </h1>
@@ -154,9 +152,9 @@
                 <div class="mt-2" style="font-size: 2rem; color: white;">
 
                     <%--github--%>
-                    <a href="//github.com/orianna-zzo" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
+                    <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
                     <%--weibo--%>
-                    <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1" aria-hidden="true"></i></a>
+                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1" aria-hidden="true"></i></a>
                     <%--instagram--%>
                     <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
                     <%--envelope--%>

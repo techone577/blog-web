@@ -32,10 +32,10 @@
 
 
 .cb-slideshow li:nth-child(1) {
-    background-image: url(/images/letter_bg_01.jpg)
+    background-image: url(/images/bg/fan.jpg)
 }
 .cb-slideshow li:nth-child(2) {
-    background-image: url(/images/letter_bg_02.jpg);
+    background-image: url(/images/bg/leaf.jpg);
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -43,7 +43,7 @@
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(3) {
-    background-image: url(/images/letter_bg_03.jpg);
+    background-image: url(/images/mirror.jpg);
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -51,15 +51,15 @@
     animation-delay: 24s;
 }
 .cb-slideshow li:nth-child(4) {
-    background-image: url(/images/letter_bg_01.jpg);
+    background-image: url(/images/bg/sea.jpg);
     animation-delay: 36s;
 }
 .cb-slideshow li:nth-child(5) {
-    background-image: url(/images/letter_bg_02.jpg);
+    background-image: url(/images/bg/woods.jpg);
     animation-delay: 48s;
 }
 .cb-slideshow li:nth-child(6) {
-    background-image: url(/images/letter_bg_03.jpg);
+    background-image: url(/images/bg/fan.jpg);
     animation-delay: 60s;
 }
 

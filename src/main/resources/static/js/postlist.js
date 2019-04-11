@@ -23,6 +23,10 @@ $(function () {
         }
     }
 
+    function removePost(){
+        $("#post_list_post_container").find(".post-card").remove();
+    }
+
     function addTags(data){
         for(var t in data){
             var info = data[t].tagName + "("+data[t].tagNum+")";
@@ -30,6 +34,36 @@ $(function () {
             $("#post_list_tag_infos").append(li);
         }
     }
+
+    function addPaging(data) {
+        layui.use('laypage', function(){
+            var laypage = layui.laypage;
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'lay-page',
+                count: data ,
+                limit : 5,
+                groups : 2,
+                jump: function (obj, first) {
+                    //首次不执行
+                    if (!first) {
+                        param.pageNum = obj.curr-1;
+                        param.pageSize = obj.limit;
+                        ajaxOption(getAction().postListQuery, JSON.stringify(param), function (json) {
+                            if (json.success) {
+                                //最后加载post
+                                removePost();
+                                addPost(json.data.postList);
+                            } else {
+                                console.log("load fail");
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    }
+
 
     function buildTag(text) {
         var li = $("#post_list_tag_template").clone().removeAttr("id");
@@ -78,24 +112,28 @@ $(function () {
     }
 
     var param = {
-        lastMinId : 65535,
+        pageNum : 0,
         pageSize : 5,
         type : "all"
     };
     var type = window.location.search.split("=")[0].replace("?","");
     if(null != type && type == "tag"){
         param.type = "tag"
-        param.typeValue = window.location.search.split("=")[1];
-        $("#post_list_title").text(param.typeValue);
+        param.typeValue = decodeURIComponent(window.location.search.split("=")[1]);
+        $("#post_list_title").text(param.typeValue.toUpperCase());
+        $("#post_list_head_title").text(param.typeValue.toUpperCase()+" | TECHONE")
     }
     if(param.type == "all"){
-        $("#post_list_title").text(param.type);
+        $("#post_list_title").text(param.type.toUpperCase());
+        $("#post_list_head_title").text(param.type.toUpperCase()+" | TECHONE")
     }
     //loadPostList
     ajaxOption(getAction().postListQuery, JSON.stringify(param), function (json) {
         if (json.success) {
-            addPost(json.data.postList);
+            //最后加载post
             addTags(json.data.tagInfoList);
+            addPaging(json.data.totalNum);
+            addPost(json.data.postList);
             $("#post_list_amount").text(json.data.totalNum+" posts");
         } else {
             console.log("load fail");

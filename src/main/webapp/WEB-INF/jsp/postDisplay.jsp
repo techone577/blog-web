@@ -11,8 +11,6 @@
 
     <title id="blog_head_title">
 
-        《Les Miserable》法语音乐会repo | TECHONE
-
     </title>
 
 
@@ -25,9 +23,7 @@
     <link rel="stylesheet" href="/css/home/github-gist.css">
 
     <%--小logo--%>
-    <link rel="shortcut icon"
-          href=""
-    >
+    <link rel="shortcut icon" href="/images/avatar/avatar.jpeg">
 
     <style type="text/css">
         @media (min-width: 800px) and (max-width: 850px) {
@@ -63,11 +59,11 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/sci-tech/">LeetCode </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=leetcode">LeetCode </a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/blog/">Blog </a>
+                    <a class="nav-link" href="/view/blog/postlist">Blog </a>
                 </li>
 
                 <li class="nav-item ">
@@ -142,7 +138,7 @@
             <div class="col-12 col-sm-5 align-middle">
                 <a href="/view/blog/home">
 
-                    <img class="pull-right avatar avatar-md" src="" alt="">
+                    <img class="pull-right avatar avatar-md" src="/images/avatar/avatar.jpeg" alt="">
 
                 </a>
             </div>
@@ -156,16 +152,16 @@
 
                 <div class="mt-2" style="font-size: 1rem; color: white;">
 
-                    <a href="//github.com/orianna-zzo" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
+                    <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
                                                                                          aria-hidden="true"></i></a>
 
-                    <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1"
+                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
                                                                                             aria-hidden="true"></i></a>
 
                     <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i
                             class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
 
-                    <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open pr-1"
+                    <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1"
                                                             aria-hidden="true"></i></a>
 
 
@@ -229,7 +225,7 @@
                                 <li class="pr-0"><a href="https://orianna-zzo.github.io/tags/"><i
                                         class="fas fa-tags"></i></a></li>
                                 <%--tags--%>
-                                <div class="tags-sm" id="blog_tags">
+                                <div class="tags-sm" id="blog_display_tags">
 
                                 </div>
                             </div>
@@ -353,7 +349,7 @@
 
 </main>
 
-<li><a id = "blog_tag_template" href="" role="button" style="display: none">名称 </a></li>
+<li id = "blog_dispaly_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
 

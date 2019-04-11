@@ -2,6 +2,7 @@ $(function () {
     // $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 
     function showBlog(data) {
+        $("#blog_head_title").text(data.title+" | TECHONE");
         $("#blog_title").text(data.title);
         $("#blog_date").text(data.addTime);
         $("#blog_content").append(data.htmlContent);
@@ -10,11 +11,8 @@ $(function () {
         });
         var tagList = data.tagList;
         for (var i in tagList) {
-            var tag = $("#blog_tag_template").clone();
-            tag.text(tagList[i]);
-            tag.attr("href", "www.baidu.com");
-            tag.show();
-            $("#blog_tags").append(tag);
+            var li = buildTag(tagList[i]);
+            $("#blog_display_tags").append(li);
         }
         if(null != data.previousPost) {
             $("#previous_blog_title").text(data.previousPost.title);
@@ -26,6 +24,24 @@ $(function () {
         }
     }
 
+    function buildTag(text) {
+        var li = $("#blog_dispaly_tag_template").clone().removeAttr("id");
+        var tag = li.find(".home_tag");
+        tag.text(text);
+        tag.on("click", function (e) {
+
+            var tagName = $(this).text().trim()
+            if (tagName.indexOf("(") >= 0) {
+                tagName = tagName.split("(")[0];
+            }
+            //阻止冒泡
+            e.stopPropagation();
+            window.location.href = getView().postList + "?tag=" + tagName;
+
+        })
+        tag.show();
+        return li;
+    }
 
     function ajaxOption(url, data, callback, option) {
         var defaultOption = {
@@ -66,7 +82,6 @@ $(function () {
 });
 
 
-
 function getAction() {
     return {
         queryBlog: "/post/queryBlog"
@@ -75,7 +90,8 @@ function getAction() {
 
 function getView() {
     return {
-        display: "display"
+        display : "display",
+        postList : "postlist"
     }
 };
 

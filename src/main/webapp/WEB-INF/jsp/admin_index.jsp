@@ -40,7 +40,6 @@
             <header class="mb-5"><h1>Blogging</h1></header>
             <P class="mb-5">年轻人的第一个博客</P>
 
-            <%--<form action="${pageContext.request.contextPath}/api/index/sign_in" method="post" class="subscribe-form" id="root_sign_in_form">--%>
                 <div class="row form-section">
 
                     <div class="col-md-7 col-sm-7 col-xs-7">
@@ -54,7 +53,6 @@
                     </div>
 
                 </div>
-            <%--</form>--%>
 
             <div class="tm-social-icons-container text-xs-center">
                 <a href="#" class="tm-social-link"><i class="fa fa-weixin"></i></a>

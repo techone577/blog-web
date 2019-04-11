@@ -50,9 +50,13 @@
                         <div class="layui-btn form-control">时间</div>
                         <input class="layui-input form-control" placeholder="test"/>
                     </div>
-                <div class="col-lg-12" style="line-height: 50px;margin-top: 40px;">
-                    <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-return"></i> 返回</button>
-                    <button class="layui-btn layui-btn-radius" id="release_btn"><i class="layui-icon layui-icon-release"></i> 发布</button>
+                    <div class="col-lg-12" style="line-height: 50px;margin-top: 40px;">
+                        <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-return"></i> 返回
+                        </button>
+                        <button class="layui-btn layui-btn-radius" id="release_btn"><i
+                                class="layui-icon layui-icon-release"></i> 发布
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,14 +93,10 @@
     }
 
 </style>
-
-
 </body>
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/editor/js/editormd.js"></script>
-<script type="text/javascript" src="/js/elements/bubbly-button.js"></script>
 <script type="text/javascript" src="/js/editor.js"></script>
 <script type="text/javascript" src="/js/bootstrap.js"></script>
 <script type="text/javascript" src="/layui/layui.all.js"></script>
-<script type="text/javascript" src="/js/elements/customButton.js"></script>
 </html>
