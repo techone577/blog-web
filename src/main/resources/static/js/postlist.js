@@ -124,7 +124,7 @@ $(function () {
         $("#post_list_head_title").text(param.typeValue.toUpperCase()+" | TECHONE")
     }
     if(param.type == "all"){
-        $("#post_list_title").text(param.type.toUpperCase());
+        $("#post_list_title").text("所有文章");
         $("#post_list_head_title").text(param.type.toUpperCase()+" | TECHONE")
     }
     //loadPostList

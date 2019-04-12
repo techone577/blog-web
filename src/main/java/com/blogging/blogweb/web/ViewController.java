@@ -51,5 +51,10 @@ public class ViewController {
         return "postlist";
     }
 
+    @RequestMapping(value = "/tagShow")
+    public String getTagShow(){
+        return "tagShow";
+    }
+
 
 }

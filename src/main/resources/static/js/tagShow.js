@@ -1,33 +1,50 @@
 $(function () {
     // $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 
-    function showBlog(data) {
-        $("#blog_head_title").text(data.title + " | TECHONE");
-        $("#blog_title").text(data.title);
-        $("#blog_date").text(data.addTime);
-        $("#blog_content").append(data.htmlContent);
-        $('pre code').each(function (i, block) {
-            hljs.highlightBlock(block);
-        });
-        //添加TOC
-        $("#post_display_TOC").append(data.toc);
-        var tagList = data.tagList;
-        for (var i in tagList) {
-            var li = buildTag(tagList[i]);
-            $("#blog_display_tags").append(li);
-        }
-        if (null != data.previousPost) {
-            $("#previous_blog_title").text(data.previousPost.title);
-            $("#previous_href").attr("href", getView().display + "?id=" + data.previousPost.postId);
-        }
-        if (null != data.nextPost) {
-            $("#next_blog_title").text(data.nextPost.title);
-            $("#next_href").attr("href", getView().display + "?id=" + data.nextPost.postId);
+    function addTags(data) {
+        for (var t in data) {
+            var info = data[t].tagName + "(" + data[t].tagNum + ")";
+            var li = buildTag(info);
+            $("#tag_show_tag_infos").append(li);
         }
     }
 
+    function addAllTags(data) {
+        for (var t in data) {
+            var info = data[t].tagName + "(" + data[t].tagNum + ")";
+            var btn = buildTagBtn(info,data[t].tagNum);
+            $("#tag_show_tag_container").append(btn);
+        }
+    }
+
+    function buildTagBtn(text,num) {
+        var btn = $("#tag_show_btn_template").clone().removeAttr("id");
+        if(num>=0 && num<=2){
+           btn.addClass("layui-btn-sm");
+        }
+        if(num>=3 && num<=6){
+            btn.addClass("layui-btn-warm");
+        }
+        if(num>=7 && num<=10){
+            btn.addClass("layui-btn-lg layui-btn-normal");
+        }
+        if(num > 10){
+            btn.addClass("layui-btn-lg layui-btn-danger");
+        }
+        btn.text(text);
+        btn.on("click",function () {
+            var tagName = $(this).text().trim()
+            if (tagName.indexOf("(") >= 0) {
+                tagName = tagName.split("(")[0];
+            }
+            window.location.href = getView().postList + "?tag=" + tagName;
+        })
+        btn.show();
+        return btn;
+    }
+
     function buildTag(text) {
-        var li = $("#blog_dispaly_tag_template").clone().removeAttr("id");
+        var li = $("#tag_show_tag_template").clone().removeAttr("id");
         var tag = li.find(".home_tag");
         tag.text(text);
         tag.on("click", function (e) {
@@ -44,6 +61,8 @@ $(function () {
         tag.show();
         return li;
     }
+
+
 
     function ajaxOption(url, data, callback, option) {
         var defaultOption = {
@@ -70,13 +89,12 @@ $(function () {
         $.ajax(defaultOption);
     }
 
-    var displayParam = {
-        postId: window.location.search.split("=")[1]
-    };
-    //加载blog
-    ajaxOption(getAction().queryBlog, JSON.stringify(displayParam), function (json) {
+    ajaxOption(getAction().tagDisplay, JSON.stringify(null), function (json) {
         if (json.success) {
-            showBlog(json.data);
+            addTags(json.data.hotTags);
+            $("#tag_show_title").text("标签");
+            $("#tag_show_amount").text("共有"+json.data.allTags.length+"个标签");
+            addAllTags(json.data.allTags);
         } else {
             console.log("load fail");
         }
@@ -84,10 +102,10 @@ $(function () {
 });
 
 
+
 function getAction() {
     return {
-        queryBlog: "/post/queryBlog",
-        obtainImg: "/image/obtain"
+        tagDisplay: "/post/queryAllTags"
     }
 };
 
@@ -96,8 +114,7 @@ function getView() {
         display : "display",
         postList : "postlist"
     }
-};
-
+}
 
 //对Date的扩展，将 Date 转化为指定格式的String
 //月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，

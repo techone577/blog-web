@@ -34,7 +34,7 @@ $(function () {
 
         imageUpload: true,
         imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL: "/smart-api/upload/editormdPic/",
+        imageUploadURL: "/image/upload",
 
         /*上传图片成功后可以做一些自己的处理*/
         onload: function () {
@@ -59,7 +59,7 @@ $(function () {
 
     function tagView() {
         return "<div class=\"form-inline\">\n" +
-            "                            <input class=\"layui-input form-control release_tag\" placeholder=\"tag\"/>\n" +
+            "                            <input class=\"layui-input form-control release_tag\" placeholder=\"标签\"/>\n" +
             "                            <button class=\"layui-btn\" onclick=\"$(this).parent().remove()\"><i\n" +
             "                                    class=\"layui-icon layui-icon-delete\"></i></button>\n" +
             "                        </div>";

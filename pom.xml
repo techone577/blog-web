@@ -82,6 +82,12 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		<!--热部署-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -99,6 +105,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!--fork:如果没有该项配置,整个devtools不会起作用-->
+					<fork>true</fork>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -258,7 +258,7 @@
             <%--tag--%>
             <div class="post-meta">
                 <div class="mb-2">
-                    <a href="https://orianna-zzo.github.io/tags/">
+                    <a href="/view/blog/tagShow">
                          <span class="font-weight-bold text-uppercase post-meta">
                             <i class="fas fa-tags pr-1" aria-hidden="true"></i>
                                 Featured Tags

@@ -8,7 +8,8 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
 
-    <title id="post_list_head_title">
+    <title id="tag_show_head_title">
+        标签 | TECHONE
     </title>
 
     <link rel="canonical" href="">
@@ -19,7 +20,6 @@
     <link href="/css/home/mdb.min.css" rel="stylesheet">
     <link href="/css/home/style.min.css" rel="stylesheet">
     <link href="/css/home/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="/layui/css/layui.css"/>
     <link rel="stylesheet" href="/css/home/github-gist.css">
 
     <link rel="shortcut icon" href="/images/avatar/avatar.jpeg">
@@ -203,7 +203,7 @@
                     </a>
                 </div>
 
-                <div class="li-x post-meta tags-md" id="post_list_tag_infos" style="margin-left: -8px;">
+                <div class="li-x post-meta tags-md" id="tag_show_tag_infos" style="margin-left: -8px;">
 
                 </div>
             </div>
@@ -231,25 +231,17 @@
 
             <ul>
                 <div class="div-x">
-                    <div class='post-heading' id="post_list_title">
+                    <div class='post-heading' id="tag_show_title">
                     </div>
                     <div class="px-2 middot"></div>
-                    <div id="post_list_amount">
+                    <div id="tag_show_amount">
                     </div>
                 </div>
 
             </ul>
-            <div id="post_list_post_container">
-                <%--<div class="pagination pagination-outline justify-content-end active-color">--%>
-                    <%--&lt;%&ndash;分页&ndash;%&gt;--%>
-                    <%--<ul class="pagination">--%>
-                    <%--</ul>--%>
-                <%--</div>--%>
-                <div style="overflow:hidden;padding:0 2%;">
-                    <div id="lay-page" style="float:right">
-                    </div>
+            <div style="margin-top: 20px">
+                <div class="form-inline" id="tag_show_tag_container">
                 </div>
-
             </div>
         </div>
 
@@ -257,42 +249,9 @@
     </div>
 </main>
 
-<div class="post-wrapper white-bg post-card" id="post_list_post_template" style="display: none">
-    <a>
-        <div class="post-header text-center">
-            <div class="px-4 post-heading title"></div>
-            <ul class="post-meta li-x mt-1">
-                <li class="date"></li>
-                <li class="middot"></li>
-                <li>5 minutes read</li>
-            </ul>
-        </div>
-        <div class="summary">概述</div>
-    </a>
+<li id = "tag_show_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 
-    <div class="post-meta li-x mt-2 div-x">
-        <div>
-            <li><a href="https://orianna-zzo.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 杂技浅尝 </a></li>
-
-            <li><a href="https://orianna-zzo.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog养成记</a></li>
-
-        </div>
-
-        <div>
-
-            <div class="li-x div-x post-meta">
-                <li class="pr-0"><a href="https://orianna-zzo.github.io/tags/"><i class="fas fa-tags"></i></a></li>
-                <%--tags--%>
-                <div class="tags-sm post_tags">
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-<li id = "post_list_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
+<button class="layui-btn form-control" style="margin-bottom: 20px;display: none" id="tag_show_btn_template"></button>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
@@ -325,9 +284,10 @@
 <script type="text/javascript" src="/js/bootstrap.js"></script>
 <script type="text/javascript" src="/js/home/mdb.min.js"></script>
 <script type="text/javascript" src="/js/home/main.js"></script>
-<script type="text/javascript" src="/layui/layui.all.js"></script>
 <script src="/js/home/highlight.pack.js"></script>
-<script src="/js/postlist.js"></script>
+<script type="text/javascript" src="/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/tagShow.js"></script>
+<link rel="stylesheet" href="/layui/css/layui.css"/>
 
 <script>hljs.initHighlightingOnLoad();</script>
 

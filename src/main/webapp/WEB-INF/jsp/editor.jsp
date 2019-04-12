@@ -6,16 +6,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/avatar/avatar.jpeg"/>
+    <title>
+        TECHONE的编辑器
+    </title>
     <!--
     Letter Template
     http://www.templatemo.com/tm-510-letter
     -->
     <link rel="stylesheet" href="/editor/css/editormd.css">
     <%--<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>--%>
-    <link rel="stylesheet" href="/css/elements/bubbly-button.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/layui/css/layui.css"/>
-    <link rel="stylesheet" href="/css/elements/customButton.css"/>
 </head>
 
 <body class="body-cus">
@@ -38,7 +40,7 @@
                         <input class="layui-input form-control" id="release_title" placeholder="标题"/>
                     </div>
                     <div class="form-inline">
-                        <div class="layui-btn ">概述</div>
+                        <div class="layui-btn" disabled="disabled">概述</div>
                         <textarea name="desc" placeholder="请输入内容" class="layui-textarea" id="release_summary" style="margin-top: 10px"></textarea>
                     </div>
                     <div class="form-inline">
@@ -51,9 +53,12 @@
                         <input class="layui-input form-control" placeholder="test"/>
                     </div>
                     <div class="col-lg-12" style="line-height: 50px;margin-top: 40px;">
-                        <button class="layui-btn layui-btn-radius"><i class="layui-icon layui-icon-return"></i> 返回
+                        <button class="layui-btn layui-btn-sm layui-btn-radius"><i
+                                class="layui-icon layui-icon-return"></i> 返回
                         </button>
-                        <button class="layui-btn layui-btn-radius" id="release_btn"><i
+                        <button class="layui-btn layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-ok"></i> 保存
+                        </button>
+                        <button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger" id="release_btn"><i
                                 class="layui-icon layui-icon-release"></i> 发布
                         </button>
                     </div>

@@ -19,4 +19,8 @@ public class BSPServiceName {
     public static final String APS_blogQuery = "Blogging.APS.PostController.query";
 
     public static final String APS_postListPagingQuery = "Blogging.APS.PostController.postListPagingQuery";
+
+    public static final String APS_imageObtain = "Blogging.APS.ImageController.obtain";
+
+    public static final String APS_tagShow="Blogging.APS.PostController.tagShow";
 }

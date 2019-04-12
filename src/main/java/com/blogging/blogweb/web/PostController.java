@@ -62,4 +62,14 @@ public class PostController {
         Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery,JsonUtil.toString(queryDTO));
         return resp;
     }
+
+    /**
+     * 展示所有tag
+     */
+    @ResponseBody
+    @RequestMapping(value = "/queryAllTags",method = RequestMethod.POST)
+    public Response queryAllTags(){
+        Response resp = serviceClient.call(BSPServiceName.APS_tagShow,null);
+        return resp;
+    }
 }
