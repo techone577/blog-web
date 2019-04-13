@@ -26,7 +26,7 @@ public class ViewController {
         return "sign_up";
     }
 
-    @RequestMapping(value = "/t")
+    @RequestMapping(value = "/editor")
     public String getTest(){
         return "editor";
     }

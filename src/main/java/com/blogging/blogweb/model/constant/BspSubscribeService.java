@@ -21,6 +21,9 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_postListPagingQuery);
             add(BSPServiceName.APS_imageObtain);
             add(BSPServiceName.APS_tagShow);
+            add(BSPServiceName.APS_BM_queryPosts);
+            add(BSPServiceName.APS_BM_queryTags);
+            add(BSPServiceName.APS_BM_queryBlog);
         }
     };
 }

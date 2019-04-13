@@ -10,6 +10,10 @@ public class BSPServiceName {
 
     public static final String TEST = "";
 
+    /**
+     * blog-web
+     */
+
     public static final String APS_postAdd = "Blogging.APS.PostController.postAdd";
 
     public static final String APS_homePagePostQuery = "Blogging.APS.PostController.HomePageListQuery";
@@ -23,4 +27,13 @@ public class BSPServiceName {
     public static final String APS_imageObtain = "Blogging.APS.ImageController.obtain";
 
     public static final String APS_tagShow="Blogging.APS.PostController.tagShow";
+
+    /**
+     * blog-vue-admin
+     */
+    public static final String APS_BM_queryPosts = "Blogging.APS.BMController.queryPosts";
+
+    public static final String APS_BM_queryTags = "Blogging.APS.BMController.queryTags";
+
+    public static final String APS_BM_queryBlog = "Blogging.APS.BMController.queryBlog";
 }

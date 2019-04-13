@@ -53,7 +53,7 @@
                         <input class="layui-input form-control" placeholder="test"/>
                     </div>
                     <div class="col-lg-12" style="line-height: 50px;margin-top: 40px;">
-                        <button class="layui-btn layui-btn-sm layui-btn-radius"><i
+                        <button class="layui-btn layui-btn-sm layui-btn-radius" onclick="javascript:history.back(-1);"><i
                                 class="layui-icon layui-icon-return"></i> 返回
                         </button>
                         <button class="layui-btn layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-ok"></i> 保存

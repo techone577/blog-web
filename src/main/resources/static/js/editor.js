@@ -65,6 +65,12 @@ $(function () {
             "                        </div>";
     }
 
+    function displayBlog(data) {
+        $("#release_title").val(data.title);
+        $("#release_summary").text(data.summary);
+        $(".editormd-markdown-textarea").text(data.content);
+    }
+
     function ajaxOption(url, data, callback, option) {
         var defaultOption = {
             contentType: "application/json",
@@ -90,19 +96,23 @@ $(function () {
         $.ajax(defaultOption);
     }
 
-    //系统用户登陆
-    // $("#post_submit_btn").on("click", function () {
-    //     var rootData = {
-    //         content: md_editor.getMarkdown()
-    //     };
-    //     ajaxOption(getAction().postSubmit, JSON.stringify(rootData), function (json) {
-    //         if (json.success) {
-    //             window.location.href = getPage().test;
-    //         } else {
-    //
-    //         }
-    //     })
-    // });
+    //设置editor
+    var pageParam = window.location.search;
+    if(null != pageParam){
+        var param = {
+            postId : pageParam.split("=")[1]
+        }
+        ajaxOption(getAction().queryBlog, JSON.stringify(param), function (json) {
+            if (json.success) {
+                console.log("analysis success")
+                displayBlog(json.data);
+                //TODO
+            } else {
+                console.log("analysis fail");
+            }
+        });
+    }
+
 
     $("#release_btn").on("click", function () {
         var postData = {
@@ -131,15 +141,11 @@ $(function () {
 
     function getAction() {
         return {
-            addPost: "/post/add"
+            addPost: "/post/add",
+            queryBlog : "/BM/queryBlog"
         }
     };
 
-    function getPage() {
-        return {
-            test: "/view/sign/t"
-        }
-    }
 });
 
 //对Date的扩展，将 Date 转化为指定格式的String

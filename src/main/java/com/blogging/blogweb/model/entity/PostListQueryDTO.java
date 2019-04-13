@@ -11,6 +11,7 @@ public class PostListQueryDTO {
 
     private String typeValue;
 
+    private Integer releaseFlag;
 
 
     public Integer getPageSize() {
@@ -43,5 +44,13 @@ public class PostListQueryDTO {
 
     public void setTypeValue(String typeValue) {
         this.typeValue = typeValue;
+    }
+
+    public Integer getReleaseFlag() {
+        return releaseFlag;
+    }
+
+    public void setReleaseFlag(Integer releaseFlag) {
+        this.releaseFlag = releaseFlag;
     }
 }
