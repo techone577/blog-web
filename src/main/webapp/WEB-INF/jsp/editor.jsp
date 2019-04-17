@@ -96,6 +96,10 @@
     .form-inline{
         margin-top: 10px;
     }
+    .CodeMirror-wrap{
+        max-height: 616px;
+        overflow-y: scroll;
+    }
 
 </style>
 </body>

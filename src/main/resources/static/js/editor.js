@@ -3,7 +3,6 @@ $(function () {
 
     var md_editor = editormd("my-editormd", {//注意1：这里的就是上面的DIV的id属性值
         width: "100%",
-        // height  : 800,
         syncScrolling: "single",
         path: "/editor/lib/",//注意2：你的路径
         onfullscreen: function () {
@@ -16,19 +15,19 @@ $(function () {
         },
         saveHTMLToTextarea: true,//注意3：这个配置，方便post提交表单
 
-        emoji: true,//emoji表情，默认关闭
-        taskList: true,
-        tocm: true, // Using [TOCM]
-        tex: true,// 开启科学公式TeX语言支持，默认关闭
-
-        flowChart: true,//开启流程图支持，默认关闭
-        sequenceDiagram: true,//开启时序/序列图支持，默认关闭,
-
-        dialogLockScreen: false,//设置弹出层对话框不锁屏，全局通用，默认为true
-        dialogShowMask: false,//设置弹出层对话框显示透明遮罩层，全局通用，默认为true
-        dialogDraggable: false,//设置弹出层对话框不可拖动，全局通用，默认为true
-        dialogMaskOpacity: 0.4, //设置透明遮罩层的透明度，全局通用，默认值为0.1
-        dialogMaskBgColor: "#000",//设置透明遮罩层的背景颜色，全局通用，默认为#fff
+        // emoji: true,//emoji表情，默认关闭
+        // taskList: true,
+        // tocm: true, // Using [TOCM]
+        // tex: true,// 开启科学公式TeX语言支持，默认关闭
+        //
+        // flowChart: true,//开启流程图支持，默认关闭
+        // sequenceDiagram: true,//开启时序/序列图支持，默认关闭,
+        //
+        // dialogLockScreen: false,//设置弹出层对话框不锁屏，全局通用，默认为true
+        // dialogShowMask: false,//设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+        // dialogDraggable: false,//设置弹出层对话框不可拖动，全局通用，默认为true
+        // dialogMaskOpacity: 0.4, //设置透明遮罩层的透明度，全局通用，默认值为0.1
+        // dialogMaskBgColor: "#000",//设置透明遮罩层的背景颜色，全局通用，默认为#fff
 
         codeFold: true,
 
@@ -68,7 +67,14 @@ $(function () {
     function displayBlog(data) {
         $("#release_title").val(data.title);
         $("#release_summary").text(data.summary);
-        $(".editormd-markdown-textarea").text(data.content);
+        $(".editormd-markdown-textarea").val(data.content);
+        // md_editor.setMarkdown(data.content);
+        var tags = data.tagList;
+        for(var i in tags)
+            $("#tag_group").append(tagView());
+        $("#tag_group").children().each(function (index) {
+            $(this).find(".release_tag").val(tags[index]);
+        })
     }
 
     function ajaxOption(url, data, callback, option) {

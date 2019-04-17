@@ -4,6 +4,7 @@ import com.blogging.blogweb.model.constant.BSPServiceName;
 import com.blogging.blogweb.model.entity.PostListQueryDTO;
 import com.blogging.blogweb.model.entity.PostQueryDTO;
 import com.blogging.blogweb.model.entity.Response;
+import com.blogging.blogweb.model.entity.TagQueryDTO;
 import com.blogging.blogweb.support.bsp.ServiceClient;
 import com.blogging.blogweb.support.utils.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,8 @@ public class BMController {
      */
     @ResponseBody
     @RequestMapping(value = "/queryTags", method = RequestMethod.POST)
-    public Response queryPosts() {
-        Response resp = serviceClient.call(BSPServiceName.APS_BM_queryTags, null);
+    public Response queryPosts(@RequestBody TagQueryDTO queryDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_queryTags, JsonUtil.toString(queryDTO));
         return resp;
     }
 
