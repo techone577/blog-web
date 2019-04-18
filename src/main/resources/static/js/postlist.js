@@ -47,7 +47,7 @@ $(function () {
                 jump: function (obj, first) {
                     //首次不执行
                     if (!first) {
-                        param.pageNum = obj.curr-1;
+                        param.pageNum = obj.curr;
                         param.pageSize = obj.limit;
                         ajaxOption(getAction().postListQuery, JSON.stringify(param), function (json) {
                             if (json.success) {
@@ -112,7 +112,7 @@ $(function () {
     }
 
     var param = {
-        pageNum : 0,
+        pageNum : 1,
         pageSize : 5,
         type : "all"
     };

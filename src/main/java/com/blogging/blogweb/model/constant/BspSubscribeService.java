@@ -12,7 +12,7 @@ public class BspSubscribeService {
     /**
      * 注册成为该服务的消费者 统一管理
      */
-    public static List<String> subscribeList = new ArrayList<String>(){
+    public static List<String> subscribeList = new ArrayList<String>() {
         {
             add(BSPServiceName.APS_postAdd);
             add(BSPServiceName.APS_homePagePostQuery);
@@ -24,6 +24,12 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_queryPosts);
             add(BSPServiceName.APS_BM_queryTags);
             add(BSPServiceName.APS_BM_queryBlog);
+            add(BSPServiceName.APS_BM_queryDrafts);
+            add(BSPServiceName.APS_BM_queryRubbishes);
+            add(BSPServiceName.APS_BM_queryTagList);
+            add(BSPServiceName.APS_BM_releasePost);
+            add(BSPServiceName.APS_BM_removePost);
+            add(BSPServiceName.APS_BM_offlinePost);
         }
     };
 }

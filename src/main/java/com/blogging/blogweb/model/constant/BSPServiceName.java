@@ -36,4 +36,17 @@ public class BSPServiceName {
     public static final String APS_BM_queryTags = "Blogging.APS.BMController.queryTags";
 
     public static final String APS_BM_queryBlog = "Blogging.APS.BMController.queryBlog";
+
+    public static final String APS_BM_queryDrafts = "Blogging.APS.BMController.queryDrafts";
+
+    public static final String APS_BM_queryRubbishes = "Blogging.APS.BMController.queryRubbishes";
+
+    public static final String APS_BM_queryTagList = "Blogging.APS.BMController.queryTagList";
+
+    public static final String APS_BM_releasePost = "Blogging.APS.BMController.postRelease";
+
+    public static final String APS_BM_offlinePost = "Blogging.APS.BMController.postOffline";
+
+    public static final String APS_BM_removePost = "Blogging.APS.BMController.postRemove";
+
 }

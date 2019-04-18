@@ -63,7 +63,7 @@ public class ServiceClient {
          * TODO 超时重试、负载均衡
          */
         Optional<ServiceEntity> optional = serviceList.stream().filter(item -> item.getServiceName().equals(serviceName)).findAny();
-        if (null == optional || null == optional.get())
+        if (!optional.isPresent() || null == optional.get())
             throw new UnifiedException(ErrorCodeEnum.NO_SERVICE_AVAILABLR);
         ServiceEntity service = optional.get();
         String resp = excuteByMethod(service, params);
