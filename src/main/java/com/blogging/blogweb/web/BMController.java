@@ -112,4 +112,14 @@ public class BMController {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_removePost, JsonUtil.toString(reqDTO));
         return resp;
     }
+
+    /**
+     * 文章恢复
+     */
+    @ResponseBody
+    @RequestMapping(value = "/recoverPost", method = RequestMethod.POST)
+    public Response recoverPost(@RequestBody BMPostModifyReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_recoverPost, JsonUtil.toString(reqDTO));
+        return resp;
+    }
 }

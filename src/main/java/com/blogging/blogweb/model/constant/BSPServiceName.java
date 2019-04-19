@@ -49,4 +49,6 @@ public class BSPServiceName {
 
     public static final String APS_BM_removePost = "Blogging.APS.BMController.postRemove";
 
+    public static final String APS_BM_recoverPost = "Blogging.APS.BMController.postRecover";
+
 }
