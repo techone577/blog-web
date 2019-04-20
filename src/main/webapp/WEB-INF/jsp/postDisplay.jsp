@@ -201,11 +201,10 @@
                         <li id="blog_date">Sep 30, 2018</li>
 
                         <li class="middot"></li>
-                        <li>2 minutes read</li>
+                        <li class="readTime" id="post_display_readtime">2 minutes read</li>
 
                         <li class="middot"></li>
-                        <li><span id="busuanzi_container_page_pv"><span
-                                id="busuanzi_value_page_pv"></span> page view</span></li>
+                        <li class="pageview" id="post_display_pv"></li>
 
                     </ul>
 
@@ -268,77 +267,6 @@
                     <li class="nav-item pb-3 text-center">
                         <span class="font-weight-bold mb-2">- CATALOG - </span>
                     </li>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<li class="nav-item">--%>
-                            <%--<a class="nav-link" href="#%e8%a7%82%e5%89%a7%e6%a1%a3%e6%a1%88">--%>
-                                <%--观剧档案--%>
-                            <%--</a>--%>
-                        <%--</li>--%>
-                    <%--</ul>--%>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<li class="nav-item">--%>
-                            <%--<a class="nav-link" href="#repo">--%>
-                                <%--Repo--%>
-                            <%--</a>--%>
-                        <%--</li>--%>
-                    <%--</ul>--%>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<ul class="nav">--%>
-                            <%--<li class="nav-item">--%>
-                                <%--<a class="nav-link" href="#%e4%bd%8d%e7%bd%ae">--%>
-                                    <%--位置--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                        <%--</ul>--%>
-                    <%--</ul>--%>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<ul class="nav">--%>
-                            <%--<li class="nav-item">--%>
-                                <%--<a class="nav-link" href="#%e8%88%9e%e7%be%8e">--%>
-                                    <%--舞美--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                        <%--</ul>--%>
-                    <%--</ul>--%>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<ul class="nav">--%>
-                            <%--<li class="nav-item">--%>
-                                <%--<a class="nav-link" href="#%e8%a1%a8%e6%bc%94">--%>
-                                    <%--表演--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                        <%--</ul>--%>
-                    <%--</ul>--%>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<ul class="nav">--%>
-                            <%--<li class="nav-item">--%>
-                                <%--<a class="nav-link" href="#%e5%85%b6%e4%bb%96">--%>
-                                    <%--其他--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                        <%--</ul>--%>
-                    <%--</ul>--%>
-
-
-                    <%--<ul class="nav">--%>
-                        <%--<li class="nav-item">--%>
-                            <%--<a class="nav-link" href="#%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6">--%>
-                                <%--版本控制--%>
-                            <%--</a>--%>
-                        <%--</li>--%>
-                    <%--</ul>--%>
                 </ul>
             </div>
 

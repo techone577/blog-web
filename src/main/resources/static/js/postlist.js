@@ -9,6 +9,7 @@ $(function () {
             t.find(".title").text(post.title);
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
+            t.find(".readtime").text(post.statisticInfo.readTime);
 
             var tagList = post.tagList;
             for (var i in tagList) {

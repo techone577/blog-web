@@ -264,7 +264,7 @@
             <ul class="post-meta li-x mt-1">
                 <li class="date"></li>
                 <li class="middot"></li>
-                <li>5 minutes read</li>
+                <li class="readtime"></li>
             </ul>
         </div>
         <div class="summary">概述</div>

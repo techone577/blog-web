@@ -9,6 +9,9 @@ $(function () {
         $('pre code').each(function (i, block) {
             hljs.highlightBlock(block);
         });
+        var statisticInfo = data.statisticInfo;
+        $("#post_display_readtime").text(statisticInfo.readTime);
+        $("#post_display_pv").text(statisticInfo.pageView+" page view");
         //添加TOC
         $("#post_display_TOC").append(data.toc);
         var tagList = data.tagList;

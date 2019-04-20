@@ -451,7 +451,7 @@
             <ul class="post-meta li-x mt-1">
                 <li class="date">日期</li>
                 <li class="middot"></li>
-                <li>One minute read</li>
+                <li class="readtime"></li>
             </ul>
         </div>
         <div class="view">

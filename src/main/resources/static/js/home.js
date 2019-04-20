@@ -41,6 +41,7 @@ $(function () {
             t.find(".title").text(post.title);
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
+            t.find(".readtime").text(post.statisticInfo.readTime);
             t.find(".img").attr("src", "/images/orianna_in_the_wood.jpg");
 
             var tagList = post.tagList;
