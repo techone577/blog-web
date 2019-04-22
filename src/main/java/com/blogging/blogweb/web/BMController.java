@@ -122,4 +122,34 @@ public class BMController {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_recoverPost, JsonUtil.toString(reqDTO));
         return resp;
     }
+
+    /**
+     * 标签名称修改
+     */
+    @ResponseBody
+    @RequestMapping(value = "/editTag", method = RequestMethod.POST)
+    public Response editTag(@RequestBody BMTagEditReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_editTag, JsonUtil.toString(reqDTO));
+        return resp;
+    }
+
+    /**
+     * 标签名称添加
+     */
+    @ResponseBody
+    @RequestMapping(value = "/addTag", method = RequestMethod.POST)
+    public Response editTag(@RequestBody BMTagModifyReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_addTag, JsonUtil.toString(reqDTO));
+        return resp;
+    }
+    /**
+     * 标签名称添加
+     */
+    @ResponseBody
+    @RequestMapping(value = "/delTagForPost", method = RequestMethod.POST)
+    public Response delTagForPost(@RequestBody BMTagModifyReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_delTagForPost, JsonUtil.toString(reqDTO));
+        return resp;
+    }
+
 }

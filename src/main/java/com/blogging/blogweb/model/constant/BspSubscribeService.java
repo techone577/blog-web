@@ -31,6 +31,9 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_removePost);
             add(BSPServiceName.APS_BM_offlinePost);
             add(BSPServiceName.APS_BM_recoverPost);
+            add(BSPServiceName.APS_BM_editTag);
+            add(BSPServiceName.APS_BM_addTag);
+            add(BSPServiceName.APS_BM_delTagForPost);
         }
     };
 }

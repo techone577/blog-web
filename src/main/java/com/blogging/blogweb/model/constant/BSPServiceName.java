@@ -51,4 +51,10 @@ public class BSPServiceName {
 
     public static final String APS_BM_recoverPost = "Blogging.APS.BMController.postRecover";
 
+    public static final String APS_BM_editTag = "Blogging.APS.BMController.editTag";
+
+    public static final String APS_BM_addTag = "Blogging.APS.BMController.addTag";
+
+    public static final String APS_BM_delTagForPost = "Blogging.APS.BMController.delTagForPost";
+
 }
