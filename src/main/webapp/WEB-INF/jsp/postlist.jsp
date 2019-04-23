@@ -60,7 +60,7 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist?tag=leetcode" >LeetCode  </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode" >LeetCode  </a>
                 </li>
 
 

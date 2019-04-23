@@ -13,9 +13,6 @@ public class BSPServiceName {
     /**
      * blog-web
      */
-
-    public static final String APS_postAdd = "Blogging.APS.PostController.postAdd";
-
     public static final String APS_homePagePostQuery = "Blogging.APS.PostController.HomePageListQuery";
 
     public static final String APS_imageUpload = "Blogging.APS.ImageController.upload";
@@ -56,5 +53,10 @@ public class BSPServiceName {
     public static final String APS_BM_addTag = "Blogging.APS.BMController.addTag";
 
     public static final String APS_BM_delTagForPost = "Blogging.APS.BMController.delTagForPost";
+
+    /**
+     * BM post
+     */
+    public static final String APS_BM_postAdd = "Blogging.APS.BMController.postAdd";
 
 }

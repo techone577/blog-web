@@ -27,7 +27,7 @@ public class PostController {
     @ResponseBody
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Response addPost(@RequestBody PostAddReqEntity entity){
-        Response resp = serviceClient.call(BSPServiceName.APS_postAdd, JsonUtil.toString(entity));
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_postAdd, JsonUtil.toString(entity));
         return resp;
     }
 

@@ -3,6 +3,7 @@ $(function () {
 
     var md_editor = editormd("my-editormd", {//注意1：这里的就是上面的DIV的id属性值
         width: "100%",
+        height: "100%",
         syncScrolling: "single",
         path: "/editor/lib/",//注意2：你的路径
         onfullscreen: function () {

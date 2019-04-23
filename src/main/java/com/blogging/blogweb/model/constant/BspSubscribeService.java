@@ -14,7 +14,7 @@ public class BspSubscribeService {
      */
     public static List<String> subscribeList = new ArrayList<String>() {
         {
-            add(BSPServiceName.APS_postAdd);
+            add(BSPServiceName.APS_BM_postAdd);
             add(BSPServiceName.APS_homePagePostQuery);
             add(BSPServiceName.APS_imageUpload);
             add(BSPServiceName.APS_blogQuery);

@@ -142,6 +142,7 @@ public class BMController {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_addTag, JsonUtil.toString(reqDTO));
         return resp;
     }
+
     /**
      * 标签名称添加
      */
@@ -152,4 +153,15 @@ public class BMController {
         return resp;
     }
 
+    /**
+     * 博客新增
+     * @param entity
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/postAdd",method = RequestMethod.POST)
+    public Response addPost(@RequestBody PostAddReqEntity entity){
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_postAdd, JsonUtil.toString(entity));
+        return resp;
+    }
 }

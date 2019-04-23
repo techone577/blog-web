@@ -48,7 +48,7 @@
                     <a class="nav-link" href="/view/blog/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist?tag=leetcode" >LeetCode  </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode" >LeetCode  </a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="/view/blog/postlist" >Blog  </a>

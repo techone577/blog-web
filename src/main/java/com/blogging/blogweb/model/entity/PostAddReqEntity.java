@@ -16,6 +16,8 @@ public class PostAddReqEntity {
 
     private String content;
 
+    private Integer releaseFlag;
+
     public String getMemberId() {
         return memberId;
     }
@@ -62,5 +64,13 @@ public class PostAddReqEntity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Integer getReleaseFlag() {
+        return releaseFlag;
+    }
+
+    public void setReleaseFlag(Integer releaseFlag) {
+        this.releaseFlag = releaseFlag;
     }
 }

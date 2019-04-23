@@ -59,7 +59,7 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist?tag=leetcode">LeetCode </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode">LeetCode </a>
                 </li>
 
                 <li class="nav-item ">
@@ -198,10 +198,10 @@
                     <ul class="post-meta li-x mt-1">
 
                         <%--时间--%>
-                        <li id="blog_date">Sep 30, 2018</li>
+                        <li id="blog_date"></li>
 
                         <li class="middot"></li>
-                        <li class="readTime" id="post_display_readtime">2 minutes read</li>
+                        <li class="readTime" id="post_display_readtime"></li>
 
                         <li class="middot"></li>
                         <li class="pageview" id="post_display_pv"></li>

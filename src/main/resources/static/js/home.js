@@ -42,7 +42,11 @@ $(function () {
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
             t.find(".readtime").text(post.statisticInfo.readTime);
-            t.find(".img").attr("src", "/images/orianna_in_the_wood.jpg");
+            if(post.firstImgUrl != null && post.firstImgUrl != ''){
+                t.find(".img").attr("src",  post.firstImgUrl);
+            }else {
+                t.find(".img").attr("src", "/images/orianna_in_the_wood.jpg");
+            }
 
             var tagList = post.tagList;
             for (var i in tagList) {

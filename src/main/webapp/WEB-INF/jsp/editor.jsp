@@ -97,7 +97,9 @@
         margin-top: 10px;
     }
     .CodeMirror-wrap{
-        max-height: 616px;
+        /*margin:0;*/
+        /*padding-top:78px;*/
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
