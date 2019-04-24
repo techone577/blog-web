@@ -14,13 +14,20 @@ public class BspSubscribeService {
      */
     public static List<String> subscribeList = new ArrayList<String>() {
         {
-            add(BSPServiceName.APS_BM_postAdd);
+
+            /**
+             * blog-web
+             */
             add(BSPServiceName.APS_homePagePostQuery);
             add(BSPServiceName.APS_imageUpload);
             add(BSPServiceName.APS_blogQuery);
             add(BSPServiceName.APS_postListPagingQuery);
             add(BSPServiceName.APS_imageObtain);
             add(BSPServiceName.APS_tagShow);
+
+            /**
+             * BM
+             */
             add(BSPServiceName.APS_BM_queryPosts);
             add(BSPServiceName.APS_BM_queryTags);
             add(BSPServiceName.APS_BM_queryBlog);
@@ -34,6 +41,9 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_editTag);
             add(BSPServiceName.APS_BM_addTag);
             add(BSPServiceName.APS_BM_delTagForPost);
+            add(BSPServiceName.APS_BM_postAdd);
+            add(BSPServiceName.APS_BM_postUpdate);
+            add(BSPServiceName.APS_BM_postDelete);
         }
     };
 }

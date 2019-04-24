@@ -138,7 +138,7 @@ public class BMController {
      */
     @ResponseBody
     @RequestMapping(value = "/addTag", method = RequestMethod.POST)
-    public Response editTag(@RequestBody BMTagModifyReqDTO reqDTO) {
+    public Response addTag(@RequestBody BMTagModifyReqDTO reqDTO) {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_addTag, JsonUtil.toString(reqDTO));
         return resp;
     }
@@ -155,13 +155,40 @@ public class BMController {
 
     /**
      * 博客新增
-     * @param entity
+     *
+     * @param
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/postAdd",method = RequestMethod.POST)
-    public Response addPost(@RequestBody PostAddReqEntity entity){
-        Response resp = serviceClient.call(BSPServiceName.APS_BM_postAdd, JsonUtil.toString(entity));
+    @RequestMapping(value = "/postAdd", method = RequestMethod.POST)
+    public Response addPost(@RequestBody BMPostAddDTO addDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_postAdd, JsonUtil.toString(addDTO));
+        return resp;
+    }
+
+    /**
+     * 博客更新
+     *
+     * @param
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/postUpdate", method = RequestMethod.POST)
+    public Response postUpdate(@RequestBody BMPostUpdateDTO updateDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_postUpdate, JsonUtil.toString(updateDTO));
+        return resp;
+    }
+
+    /**
+     * 博客删除
+     *
+     * @param
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/postDelete", method = RequestMethod.POST)
+    public Response postDelete(@RequestBody BMPostModifyReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_postDelete, JsonUtil.toString(reqDTO));
         return resp;
     }
 }

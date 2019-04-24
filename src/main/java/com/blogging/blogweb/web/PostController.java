@@ -2,7 +2,7 @@ package com.blogging.blogweb.web;
 
 
 import com.blogging.blogweb.model.constant.BSPServiceName;
-import com.blogging.blogweb.model.entity.PostAddReqEntity;
+import com.blogging.blogweb.model.entity.BMPostAddDTO;
 import com.blogging.blogweb.model.entity.PostListQueryDTO;
 import com.blogging.blogweb.model.entity.PostQueryDTO;
 import com.blogging.blogweb.model.entity.Response;
@@ -26,7 +26,7 @@ public class PostController {
      */
     @ResponseBody
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public Response addPost(@RequestBody PostAddReqEntity entity){
+    public Response addPost(@RequestBody BMPostAddDTO entity){
         Response resp = serviceClient.call(BSPServiceName.APS_BM_postAdd, JsonUtil.toString(entity));
         return resp;
     }

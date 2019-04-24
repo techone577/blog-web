@@ -8,8 +8,6 @@ package com.blogging.blogweb.model.constant;
  */
 public class BSPServiceName {
 
-    public static final String TEST = "";
-
     /**
      * blog-web
      */
@@ -58,5 +56,9 @@ public class BSPServiceName {
      * BM post
      */
     public static final String APS_BM_postAdd = "Blogging.APS.BMController.postAdd";
+
+    public static final String APS_BM_postUpdate = "Blogging.APS.BMController.postUpdate";
+
+    public static final String APS_BM_postDelete = "Blogging.APS.BMController.postDelete";
 
 }

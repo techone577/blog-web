@@ -1,6 +1,7 @@
 package com.blogging.blogweb.config.spring;
 
 
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -8,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import javax.servlet.MultipartConfigElement;
 import java.util.List;
 
 /**
@@ -39,6 +41,16 @@ public class MvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers (ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
+
+    //设置上传文件大小限制
+    @Bean
+    public MultipartConfigElement multipartConfigElement() {
+        MultipartConfigFactory config = new MultipartConfigFactory();
+        config.setMaxFileSize("10MB");
+        config.setMaxRequestSize("100MB");
+        return config.createMultipartConfig();
+    }
+
 
 //    @Bean
 //    public JsonMapperArgumentResolver jsonMapperArgumentResolver () {

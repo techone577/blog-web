@@ -2,7 +2,7 @@ package com.blogging.blogweb.model.entity;
 
 import java.util.List;
 
-public class PostAddReqEntity {
+public class BMPostAddDTO {
 
     private String memberId;
 
