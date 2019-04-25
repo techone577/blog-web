@@ -52,6 +52,8 @@ public class BSPServiceName {
 
     public static final String APS_BM_delTagForPost = "Blogging.APS.BMController.delTagForPost";
 
+    public static final String APS_BM_delTag = "Blogging.APS.BMController.tagDelete";
+
     /**
      * BM post
      */

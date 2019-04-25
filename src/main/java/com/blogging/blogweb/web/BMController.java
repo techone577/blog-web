@@ -191,4 +191,17 @@ public class BMController {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_postDelete, JsonUtil.toString(reqDTO));
         return resp;
     }
+    /**
+     * 标签删除
+     *
+     * @param
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/tagDelete", method = RequestMethod.POST)
+    public Response tagDelete(@RequestBody BMTagDelReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_delTag, JsonUtil.toString(reqDTO));
+        return resp;
+    }
+
 }

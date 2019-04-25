@@ -44,6 +44,7 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_postAdd);
             add(BSPServiceName.APS_BM_postUpdate);
             add(BSPServiceName.APS_BM_postDelete);
+            add(BSPServiceName.APS_BM_delTag);
         }
     };
 }
