@@ -165,36 +165,6 @@
 
             <div class="post-meta">
                 <div class="mb-2">
-                    <a href="https://orianna-zzo.github.io/categories/">
-                        <span class="font-weight-bold text-uppercase post-meta">
-                            <i class="fas fa-folder-open pr-1" aria-hidden="true"></i>
-                                 Categories
-                        </span>
-                    </a>
-                </div>
-                <div class="li-x post-meta" id="post_list_categories" style="margin-left: -8px;">
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D">
-                            <span>杂技浅尝 (29)</span>
-                        </a>
-                    </li>
-
-                    <li class="middot"></li>
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E5%AD%A6%E6%B5%B7%E6%97%A0%E6%B6%AF">
-                            <span>学海无涯 (1)</span>
-                        </a>
-                    </li>
-
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="post-meta">
-                <div class="mb-2">
                     <a href="/view/blog/tagShow">
                         <span class="font-weight-bold text-uppercase post-meta">
                             <i class="fas fa-tags pr-1" aria-hidden="true"></i>

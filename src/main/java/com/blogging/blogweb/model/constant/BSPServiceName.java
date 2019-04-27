@@ -3,7 +3,7 @@ package com.blogging.blogweb.model.constant;
 /**
  * @author techoneduan
  * @date 2018/12/20
- *
+ * <p>
  * 需要使用其他系统的 BSP名称 统一管理
  */
 public class BSPServiceName {
@@ -21,7 +21,7 @@ public class BSPServiceName {
 
     public static final String APS_imageObtain = "Blogging.APS.ImageController.obtain";
 
-    public static final String APS_tagShow="Blogging.APS.PostController.tagShow";
+    public static final String APS_tagShow = "Blogging.APS.PostController.tagShow";
 
     /**
      * blog-vue-admin
@@ -62,5 +62,12 @@ public class BSPServiceName {
     public static final String APS_BM_postUpdate = "Blogging.APS.BMController.postUpdate";
 
     public static final String APS_BM_postDelete = "Blogging.APS.BMController.postDelete";
+
+    /**
+     * AMS
+     */
+    public static final String AMS_AUTH_login = "Blogging.AMS.AuthController.login";
+
+    public static final String AMS_AUTH_logout = "Blogging.AMS.AuthController.logout";
 
 }

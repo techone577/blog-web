@@ -197,64 +197,6 @@
         <%--main 侧边--%>
         <div class="col-md-3">
             <hr>
-            <%--分类--%>
-            <div class="post-meta">
-                <div class="mb-2">
-                    <a href="https://orianna-zzo.github.io/categories/">
-                        <span class="font-weight-bold text-uppercase post-meta">
-                             <i class="fas fa-folder-open pr-1" aria-hidden="true"></i>
-                                Categories
-                        </span>
-                    </a>
-                </div>
-                <div class="li-x post-meta" style="margin-left: -8px;">
-               <%--动态加载分类文章--%>
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D">
-                            <span>杂技浅尝 (29)</span>
-                        </a>
-                    </li>
-
-
-                    <li class="middot"></li>
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E5%93%81%E9%89%B4%E8%AF%84%E8%AE%BA">
-                            <span>品鉴评论 (10)</span>
-                        </a>
-                    </li>
-
-
-                    <li class="middot"></li>
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB">
-                            <span>论文精读 (2)</span>
-                        </a>
-                    </li>
-
-
-                    <li class="middot"></li>
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E5%AD%A6%E6%B5%B7%E6%97%A0%E6%B6%AF">
-                            <span>学海无涯 (1)</span>
-                        </a>
-                    </li>
-
-
-                    <li class="middot"></li>
-
-                    <li class="py-1">
-                        <a href="https://orianna-zzo.github.io/categories/%E5%AF%B9%E9%85%92%E5%BD%93%E6%AD%8C">
-                            <span>对酒当歌 (1)</span>
-                        </a>
-                    </li>
-
-                </div>
-            </div>
-            <hr>
             <%--tag--%>
             <div class="post-meta">
                 <div class="mb-2">

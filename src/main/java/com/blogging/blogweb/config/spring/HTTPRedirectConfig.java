@@ -32,7 +32,7 @@ public class HTTPRedirectConfig {
                 SecurityConstraint securityConstraint = new SecurityConstraint();
                 securityConstraint.setUserConstraint("CONFIDENTIAL");
                 SecurityCollection collection = new SecurityCollection();
-                collection.addPattern("/view/sign/*");
+                collection.addPattern("/view/blog/*");
                 //用rest测试扣具测接口因为状态码为302/301，会强制切换请求头为get方法，或者客户端手动返回307/308
 //              collection.addPattern("/api/index/*");
                 securityConstraint.addCollection(collection);
