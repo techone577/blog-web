@@ -36,8 +36,8 @@ public class AuthController {
 
     @RequestMapping("/logout")
     @ResponseBody
-    public Response logout() {
-        return client.call(BSPServiceName.AMS_AUTH_logout, null);
+    public Response logout(@RequestBody AuthReqDTO reqDTO) {
+        return client.call(BSPServiceName.AMS_AUTH_logout, JsonUtil.toString(reqDTO));
     }
 
 }

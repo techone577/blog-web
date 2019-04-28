@@ -17,8 +17,8 @@ public class CORSConfiguration {
             final String ORIGINS[] = new String[] { "GET", "POST", "PUT", "DELETE" };
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:8088").allowCredentials(true).allowedMethods(ORIGINS)
-                        .maxAge(3600);
+                registry.addMapping("/**").allowedOrigins("http://127.0.0.1:8088").allowCredentials(true).allowedMethods(ORIGINS)
+                        .maxAge(3600).exposedHeaders("Set-Cookie","ams-JSESSIONID");
             }
         };
     }

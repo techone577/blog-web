@@ -85,6 +85,7 @@ public class ServiceClient {
         if (RestMethod.POST.equalsIgnoreCase(service.getMethod())) {
             ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, params, String.class);
             setCookie(responseEntity);
+            setAMSJSESSIONID(responseEntity);
             resp = responseEntity.getBody();
         } else if (RestMethod.GET.equalsIgnoreCase(service.getMethod())) {
             /**
@@ -120,6 +121,21 @@ public class ServiceClient {
                     response.addCookie(cookie);
                 });
             }
+        }
+    }
+
+    /**
+     * 设置 ams-JSID response header
+     * @return
+     */
+    private void setAMSJSESSIONID(ResponseEntity responseEntity) {
+        HttpHeaders httpHeaders = responseEntity.getHeaders();
+        if (httpHeaders.containsKey("ams-JSESSIONID")) {
+            ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+            HttpServletResponse response = attributes.getResponse();
+            List<String> jsid = httpHeaders.get("ams-JSESSIONID");
+            if (null != jsid && jsid.size() > 0)
+                response.addHeader("ams-JSESSIONID", jsid.get(0));
         }
     }
 
