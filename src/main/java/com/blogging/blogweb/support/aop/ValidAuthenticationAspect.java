@@ -67,8 +67,12 @@ public class ValidAuthenticationAspect {
         map.put("sessionId", amsJSID);
         map.put("authority", permission);
         Response response = client.call(BSPServiceName.AMS_AUTH_CERTIFY, JsonUtil.toString(map));
-        if (!response.isSuccess())
-            throw new UnifiedException(ErrorCodeEnum.AUTH_FAILED_ERROR, response.getMsg());
+        if (!response.isSuccess()) {
+            if (response.getErrorCode() == 20009)
+                throw new UnifiedException(ErrorCodeEnum.PERMISSION_DENIED_ERROR,response.getMsg());
+            else
+                throw new UnifiedException(ErrorCodeEnum.AUTH_FAILED_ERROR);
+        }
 
     }
 }

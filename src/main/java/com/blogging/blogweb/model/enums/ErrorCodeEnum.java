@@ -13,13 +13,14 @@ public enum ErrorCodeEnum {
     /**
      * 验证
      */
-    AUTH_FAILED_ERROR(00000,"验证失败,需要重新登录");
+    AUTH_FAILED_ERROR(10000, "验证失败,需要重新登录"),
+    PERMISSION_DENIED_ERROR(10001, "权限认证失败");
 
     private int code;
 
     private String msg;
 
-    ErrorCodeEnum (int code, String msg) {
+    ErrorCodeEnum(int code, String msg) {
         this.code = code;
         this.msg = msg;
     }
