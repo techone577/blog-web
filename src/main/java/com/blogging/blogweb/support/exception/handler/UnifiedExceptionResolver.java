@@ -69,7 +69,6 @@ public class UnifiedExceptionResolver extends SimpleMappingExceptionResolver {
         String charCode = "UTF-8";
         try {
 //          String resStr = Base64.getEncoder().encodeToString(result.getBytes(StandardCharsets.UTF_8));
-            response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Content-Type", "application/json;charset=UTF-8");
             response.setHeader("Access-Control-Allow-Methods", "*");
             out = response.getWriter();

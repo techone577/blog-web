@@ -4,6 +4,7 @@ package com.blogging.blogweb.config.spring;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -17,6 +18,7 @@ import java.util.List;
  * @date 2018/11/6
  */
 @Configuration
+@EnableAspectJAutoProxy
 public class MvcConfig implements WebMvcConfigurer {
     @Bean
     public InternalResourceViewResolver viewResolver () {

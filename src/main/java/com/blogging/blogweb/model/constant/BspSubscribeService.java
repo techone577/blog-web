@@ -51,6 +51,7 @@ public class BspSubscribeService {
              */
             add(BSPServiceName.AMS_AUTH_login);
             add(BSPServiceName.AMS_AUTH_logout);
+            add(BSPServiceName.AMS_AUTH_CERTIFY);
         }
     };
 }

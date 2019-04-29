@@ -2,6 +2,7 @@ package com.blogging.blogweb.web;
 
 import com.blogging.blogweb.model.constant.BSPServiceName;
 import com.blogging.blogweb.model.entity.*;
+import com.blogging.blogweb.support.annotation.ValidAuthentication;
 import com.blogging.blogweb.support.bsp.ServiceClient;
 import com.blogging.blogweb.support.utils.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class BMController {
      */
     @ResponseBody
     @RequestMapping(value = "/queryPosts", method = RequestMethod.POST)
+    @ValidAuthentication(permission = "root")
     public Response queryPosts(@RequestBody BMPostListQueryDTO queryDTO) {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_queryPosts, JsonUtil.toString(queryDTO));
         return resp;

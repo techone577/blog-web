@@ -70,4 +70,6 @@ public class BSPServiceName {
 
     public static final String AMS_AUTH_logout = "Blogging.AMS.AuthController.logout";
 
+    public static final String AMS_AUTH_CERTIFY = "Blogging.AMS.AuthController.stateJudge";
+
 }
