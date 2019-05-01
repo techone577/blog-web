@@ -72,4 +72,14 @@ public class BSPServiceName {
 
     public static final String AMS_AUTH_CERTIFY = "Blogging.AMS.AuthController.stateJudge";
 
+    public static final String AMS_BM_queryUsers = "Blogging.AMS.BMController.queryUsers";
+
+    public static final String AMS_AUTH_register = "Blogging.AMS.AuthController.register";
+
+    public static final String AMS_AUTH_delUser = "Blogging.AMS.AuthController.delUser";
+
+    public static final String AMS_AUTH_modify = "Blogging.AMS.AuthController.modify";
+
+    public static final String AMS_BM_querySingleUser = "Blogging.AMS.BMController.queryUserByName";
+
 }

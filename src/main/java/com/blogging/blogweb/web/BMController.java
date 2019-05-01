@@ -193,6 +193,7 @@ public class BMController {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_postDelete, JsonUtil.toString(reqDTO));
         return resp;
     }
+
     /**
      * 标签删除
      *
@@ -203,6 +204,22 @@ public class BMController {
     @RequestMapping(value = "/tagDelete", method = RequestMethod.POST)
     public Response tagDelete(@RequestBody BMTagDelReqDTO reqDTO) {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_delTag, JsonUtil.toString(reqDTO));
+        return resp;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/queryUsers", method = RequestMethod.POST)
+    @ValidAuthentication(permission = "root")
+    public Response queryUsers() {
+        Response resp = serviceClient.call(BSPServiceName.AMS_BM_queryUsers, null);
+        return resp;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/querySingleUser", method = RequestMethod.POST)
+    @ValidAuthentication(permission = "root")
+    public Response querySingleUser(@RequestBody AuthReqDTO reqDTO) {
+        Response resp = serviceClient.call(BSPServiceName.AMS_BM_querySingleUser, JsonUtil.toString(reqDTO));
         return resp;
     }
 

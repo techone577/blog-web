@@ -56,12 +56,12 @@ public class ServiceClient {
     @Autowired
     private RedisUtil redisUtil;
 
-    public Response call (String serviceName, String params) {
+    public Response call(String serviceName, String params) {
         String response = excuteCall(serviceName, params);
         return ResponseBuilder.buildResult(response);
     }
 
-    private String excuteCall (String serviceName, String params) {
+    private String excuteCall(String serviceName, String params) {
         List<ServiceEntity> serviceList = pullServiceFromLocal();
         if (null == serviceList || serviceList.size() == 0)
             throw new UnifiedException(ErrorCodeEnum.NO_SERVICE_AVAILABLR);
@@ -76,11 +76,11 @@ public class ServiceClient {
         return resp;
     }
 
-    private String excuteByMethod (ServiceEntity service, String params) {
+    private String excuteByMethod(ServiceEntity service, String params) {
         String resp = null;
         String url = Constants.HTTP_PREFIX + service.getIpAddr() + Constants.PATH_SEPERATOR + service.getPort() + service.getRouteAddr();
-        LOG.info("BSP调用,serviceName:{},route:{},params:{}",service.getServiceName(),url,params);
-        if(null != params)
+        LOG.info("BSP调用,serviceName:{},route:{},params:{}", service.getServiceName(), url, params);
+        if (null != params)
             params = Base64Util.encodeToUrlSafeString(params);
         if (RestMethod.POST.equalsIgnoreCase(service.getMethod())) {
             ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, params, String.class);
@@ -91,7 +91,12 @@ public class ServiceClient {
             /**
              * 避免restTemplate强制url encode
              */
-            UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromHttpUrl(url + Constants.QUESTION_MARK + params);
+            UriComponentsBuilder uriBuilder = null;
+            if (null != params) {
+               uriBuilder = UriComponentsBuilder.fromHttpUrl(url + Constants.QUESTION_MARK + params);
+            } else{
+                uriBuilder = UriComponentsBuilder.fromHttpUrl(url);
+            }
             ResponseEntity<String> responseEntity = restTemplate.getForEntity(uriBuilder.build().toUri(), String.class);
             setCookie(responseEntity);
             resp = responseEntity.getBody();
@@ -103,19 +108,20 @@ public class ServiceClient {
 
     /**
      * 设置cookie
+     *
      * @param responseEntity
      */
-    private void setCookie(ResponseEntity responseEntity){
-        if(null != responseEntity && responseEntity.getHeaders().containsKey("Set-Cookie")){
+    private void setCookie(ResponseEntity responseEntity) {
+        if (null != responseEntity && responseEntity.getHeaders().containsKey("Set-Cookie")) {
             HttpHeaders httpHeaders = responseEntity.getHeaders();
             List<String> cookies = httpHeaders.get("Set-Cookie");
             ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
             HttpServletResponse response = attributes.getResponse();
-            if(null != cookies){
-                cookies.forEach(i->{
+            if (null != cookies) {
+                cookies.forEach(i -> {
                     String name = i.split(";")[0].split("=")[0];
                     String value = i.split(";")[0].split("=")[1];
-                    Cookie cookie = new Cookie(name,value);
+                    Cookie cookie = new Cookie(name, value);
                     cookie.setMaxAge(3600);
                     cookie.setPath("/");
                     response.addCookie(cookie);
@@ -126,6 +132,7 @@ public class ServiceClient {
 
     /**
      * 设置 ams-JSID response header
+     *
      * @return
      */
     private void setAMSJSESSIONID(ResponseEntity responseEntity) {
@@ -139,7 +146,7 @@ public class ServiceClient {
         }
     }
 
-    private List<ServiceEntity> pullServiceFromLocal () {
+    private List<ServiceEntity> pullServiceFromLocal() {
         List<ServiceEntity> list = null;
         String services = redisUtil.getString(RedisConstants.INSTANCE_CACHE);
         if (StringUtils.isBlank(services))
@@ -151,7 +158,7 @@ public class ServiceClient {
         return serviceList;
     }
 
-    private String pullServiceFromRemote () {
+    private String pullServiceFromRemote() {
         NettyReqEntity entity = new NettyReqEntity();
         entity.setRequestId(UUID.randomUUID().toString());
         entity.setHeader(NettyHeader.PULL);
