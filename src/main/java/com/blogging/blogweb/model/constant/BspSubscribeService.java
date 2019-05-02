@@ -19,7 +19,8 @@ public class BspSubscribeService {
              * blog-web
              */
             add(BSPServiceName.APS_homePagePostQuery);
-            add(BSPServiceName.APS_imageUpload);
+            add(BSPServiceName.APS_postImageUpload);
+            add(BSPServiceName.APS_coverImageUpload);
             add(BSPServiceName.APS_blogQuery);
             add(BSPServiceName.APS_postListPagingQuery);
             add(BSPServiceName.APS_imageObtain);
@@ -45,6 +46,8 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_postUpdate);
             add(BSPServiceName.APS_BM_postDelete);
             add(BSPServiceName.APS_BM_delTag);
+            add(BSPServiceName.APS_BM_addCategory);
+            add(BSPServiceName.APS_BM_queryCategory);
 
             /**
              * AMS

@@ -13,7 +13,9 @@ public class BSPServiceName {
      */
     public static final String APS_homePagePostQuery = "Blogging.APS.PostController.HomePageListQuery";
 
-    public static final String APS_imageUpload = "Blogging.APS.ImageController.upload";
+    public static final String APS_postImageUpload = "Blogging.APS.ImageController.uploadForPost";
+
+    public static final String APS_coverImageUpload = "Blogging.APS.ImageController.uploadForCover";
 
     public static final String APS_blogQuery = "Blogging.APS.PostController.query";
 
@@ -54,14 +56,15 @@ public class BSPServiceName {
 
     public static final String APS_BM_delTag = "Blogging.APS.BMController.tagDelete";
 
-    /**
-     * BM post
-     */
     public static final String APS_BM_postAdd = "Blogging.APS.BMController.postAdd";
 
     public static final String APS_BM_postUpdate = "Blogging.APS.BMController.postUpdate";
 
     public static final String APS_BM_postDelete = "Blogging.APS.BMController.postDelete";
+
+    public static final String APS_BM_addCategory = "Blogging.APS.BMController.addCategory";
+
+    public static final String APS_BM_queryCategory = "Blogging.APS.BMController.queryCategory";
 
     /**
      * AMS

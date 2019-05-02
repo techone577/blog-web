@@ -12,6 +12,8 @@ public class UserInfoModifyDTO {
 
     private String password;
 
+    private String oldPassword;
+
     private String memberId;
 
     public String getName() {
@@ -28,6 +30,14 @@ public class UserInfoModifyDTO {
 
     public void setPermission(String permission) {
         this.permission = permission;
+    }
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
     }
 
     public String getPassword() {

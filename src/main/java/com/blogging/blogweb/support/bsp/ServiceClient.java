@@ -122,7 +122,8 @@ public class ServiceClient {
                     String name = i.split(";")[0].split("=")[0];
                     String value = i.split(";")[0].split("=")[1];
                     Cookie cookie = new Cookie(name, value);
-                    cookie.setMaxAge(3600);
+                    //不指定过期时间 为绘画性cookie 浏览器关闭自动清除
+//                  cookie.setMaxAge(3600);
                     cookie.setPath("/");
                     response.addCookie(cookie);
                 });

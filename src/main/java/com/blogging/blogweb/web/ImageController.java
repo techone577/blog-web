@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+
 import sun.misc.BASE64Encoder;
 
 @Controller
@@ -35,9 +36,9 @@ public class ImageController {
 
     //editormd-image-file
     @ResponseBody
-    @RequestMapping(value = "/upload")
-    public ImageRespDTO upload(@RequestParam(value = "editormd-image-file") MultipartFile file,
-                               HttpServletRequest request, HttpServletResponse response) throws Exception {
+    @RequestMapping(value = "/uploadForPost")
+    public ImageRespDTO uploadForPost(@RequestParam(value = "editormd-image-file") MultipartFile file,
+                                      HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         ImageRespDTO respDTO = new ImageRespDTO() {{
             setSuccess(0);
@@ -49,12 +50,37 @@ public class ImageController {
 
         BASE64Encoder encoder = new BASE64Encoder();
         String imString = encoder.encode(file.getBytes());
-        Map<String,Object> imMap = new HashMap<>();
-        imMap.put("imString",imString);
-        imMap.put("orignalName",file.getOriginalFilename());
-        Response resp = client.call(BSPServiceName.APS_imageUpload,JsonUtil.toString(imMap));
-        if(resp.isSuccess())
-            respDTO = JsonUtil.toBean(resp.getData(),ImageRespDTO.class);
+        Map<String, Object> imMap = new HashMap<>();
+        imMap.put("imString", imString);
+        imMap.put("orignalName", file.getOriginalFilename());
+        Response resp = client.call(BSPServiceName.APS_postImageUpload, JsonUtil.toString(imMap));
+        if (resp.isSuccess())
+            respDTO = JsonUtil.toBean(resp.getData(), ImageRespDTO.class);
+        return respDTO;
+
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/uploadForCover")
+    public ImageRespDTO uploadForCover(@RequestParam(value = "editormd-image-file") MultipartFile file,
+                                       HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        ImageRespDTO respDTO = new ImageRespDTO() {{
+            setSuccess(0);
+            setMessage("file is null");
+            setUrl(null);
+        }};
+        if (null == file)
+            return respDTO;
+
+        BASE64Encoder encoder = new BASE64Encoder();
+        String imString = encoder.encode(file.getBytes());
+        Map<String, Object> imMap = new HashMap<>();
+        imMap.put("imString", imString);
+        imMap.put("orignalName", file.getOriginalFilename());
+        Response resp = client.call(BSPServiceName.APS_coverImageUpload, JsonUtil.toString(imMap));
+        if (resp.isSuccess())
+            respDTO = JsonUtil.toBean(resp.getData(), ImageRespDTO.class);
         return respDTO;
 
     }

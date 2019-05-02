@@ -5,8 +5,10 @@ import com.blogging.blogweb.model.entity.AuthReqDTO;
 import com.blogging.blogweb.model.entity.RegisterReqDTO;
 import com.blogging.blogweb.model.entity.Response;
 import com.blogging.blogweb.model.entity.UserInfoModifyDTO;
+import com.blogging.blogweb.support.annotation.ValidAuthentication;
 import com.blogging.blogweb.support.bsp.ServiceClient;
 import com.blogging.blogweb.support.utils.JsonUtil;
+import com.blogging.blogweb.support.utils.ResponseBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,20 +47,30 @@ public class AuthController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
+    @ValidAuthentication(permission = "root")
     public Response rehister(@RequestBody RegisterReqDTO dto) {
         return client.call(BSPServiceName.AMS_AUTH_register, JsonUtil.toString(dto));
     }
 
     @RequestMapping(value = "/delUser", method = RequestMethod.POST)
     @ResponseBody
+    @ValidAuthentication(permission = "root")
     public Response delUser(@RequestBody AuthReqDTO dto) {
         return client.call(BSPServiceName.AMS_AUTH_delUser, JsonUtil.toString(dto));
     }
 
     @RequestMapping(value = "/modify", method = RequestMethod.POST)
     @ResponseBody
+    @ValidAuthentication
     public Response modify(@RequestBody UserInfoModifyDTO dto) {
         return client.call(BSPServiceName.AMS_AUTH_modify, JsonUtil.toString(dto));
+    }
+
+    @RequestMapping(value = "/auth", method = RequestMethod.POST)
+    @ResponseBody
+    @ValidAuthentication
+    public Response auth() {
+        return ResponseBuilder.build(true, null);
     }
 
 }
