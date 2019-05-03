@@ -153,16 +153,16 @@
                 <div class="mt-2" style="font-size: 1rem; color: white;">
 
                     <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
-                                                                                         aria-hidden="true"></i></a>
+                                                                                              aria-hidden="true"></i></a>
 
                     <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
-                                                                                            aria-hidden="true"></i></a>
+                                                                                               aria-hidden="true"></i></a>
 
                     <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i
                             class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
 
                     <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1"
-                                                            aria-hidden="true"></i></a>
+                                                          aria-hidden="true"></i></a>
 
 
                 </div>
@@ -182,15 +182,6 @@
             <div class="z-depth-1  post-wrapper white-bg single-post">
                 <%--blog header--%>
                 <div class="post-header text-center">
-                    <ul class="post-meta li-x">
-
-                        <li><a href="https://orianna-zzo.github.io/categories/%E5%93%81%E9%89%B4%E8%AF%84%E8%AE%BA"><i
-                                class="fas fa-folder-open pr-1" aria-hidden="true"></i> 品鉴评论 </a></li>
-
-                        <li><a href="https://orianna-zzo.github.io/series/%E8%A7%82%E5%90%8Erepo"><i
-                                class="fas fa-bookmark pr-1" aria-hidden="true"></i>观后repo</a></li>
-
-                    </ul>
 
                     <%--title--%>
                     <div class="px-4 post-heading" id="blog_title"></div>
@@ -205,11 +196,13 @@
 
                         <li class="middot"></li>
                         <li class="pageview" id="post_display_pv"></li>
+                        <li id="post-display-category"><a class="a"><i
+                                class="fas fa-folder-open pr-1" aria-hidden="true"></i><span></span></a></li>
 
                     </ul>
 
                     <%--<div class="view">--%>
-                        <%--<img src="https://orianna-zzo.github.io/images/series/%E8%A7%82%E5%90%8Erepo/2018-09/les-mis-ad.jpg"/>--%>
+                    <%--<img src="https://orianna-zzo.github.io/images/series/%E8%A7%82%E5%90%8Erepo/2018-09/les-mis-ad.jpg"/>--%>
                     <%--</div>--%>
 
                 </div>
@@ -277,7 +270,7 @@
 
 </main>
 
-<li id = "blog_dispaly_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
+<li id="blog_dispaly_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
 
@@ -304,8 +297,8 @@
     <div class="copyright py-4">
 
         <span>  2019 - NOW &copy; | Theme <a href='https://github.com/techone577'
-                                              target="_blank">Blogging</a> by <a href='https://github.com/techone577'
-                                                                                 target="_blank">TechOne</a>  </span>
+                                             target="_blank">Blogging</a> by <a href='https://github.com/techone577'
+                                                                                target="_blank">TechOne</a>  </span>
     </div>
 
 

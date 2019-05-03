@@ -180,20 +180,20 @@
 
             <hr>
 
-            <div class="post-meta">
-                <div class="mb-2">
-                    <a href="https://orianna-zzo.github.io/series/">
-                        <span class="font-weight-bold text-uppercase post-meta">
-                            <i class="fas fa-bookmark pr-1" aria-hidden="true"></i>
-                                 Recommend Series
-                        </span>
-                    </a>
-                </div>
+            <%--<div class="post-meta">--%>
+                <%--<div class="mb-2">--%>
+                    <%--<a href="https://orianna-zzo.github.io/series/">--%>
+                        <%--<span class="font-weight-bold text-uppercase post-meta">--%>
+                            <%--<i class="fas fa-bookmark pr-1" aria-hidden="true"></i>--%>
+                                 <%--Recommend Series--%>
+                        <%--</span>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
 
-                <div class="post-meta" id="post_list_series" >
-                    <li class="py-1"><a href="https://orianna-zzo.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0"><span>Blog养成记 (16)</span></a></li>
-                </div>
-            </div>
+                <%--<div class="post-meta" id="post_list_series" >--%>
+                    <%--<li class="py-1"><a href="https://orianna-zzo.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0"><span>Blog养成记 (16)</span></a></li>--%>
+                <%--</div>--%>
+            <%--</div>--%>
 
         </div>
 

@@ -25,6 +25,8 @@ public class BSPServiceName {
 
     public static final String APS_tagShow = "Blogging.APS.PostController.tagShow";
 
+    public static final String APS_categoryShow = "Blogging.APS.PostController.queryCategoryInfos";
+
     /**
      * blog-vue-admin
      */
@@ -65,6 +67,11 @@ public class BSPServiceName {
     public static final String APS_BM_addCategory = "Blogging.APS.BMController.addCategory";
 
     public static final String APS_BM_queryCategory = "Blogging.APS.BMController.queryCategory";
+
+    public static final String APS_BM_modifyCategory = "Blogging.APS.BMController.modifyCategory";
+
+    public static final String APS_BM_queryCategoryNames = "Blogging.APS.BMController.queryCategoryNames";
+
 
     /**
      * AMS

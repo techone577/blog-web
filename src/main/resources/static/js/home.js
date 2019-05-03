@@ -2,8 +2,6 @@ $(function () {
     // $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 
 
-
-
     //上传文件处理
     $("#submit_btn").on("click", function () {
 
@@ -35,24 +33,26 @@ $(function () {
     });
 
     function addPost(data) {
-        for(var p in data) {
+        for (var p in data) {
             var post = data[p];
-            var t = $("#post_template").clone().attr("id",post.postId);
+            var t = $("#post_template").clone().attr("id", post.postId);
             t.find(".title").text(post.title);
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
             t.find(".readtime").text(post.statisticInfo.readTime);
-            if(post.firstImgUrl != null && post.firstImgUrl != ''){
-                t.find(".img").attr("src",  post.firstImgUrl);
-            }else {
-                t.find(".img").attr("src", "/images/orianna_in_the_wood.jpg");
+            if (post.firstImgUrl != null && post.firstImgUrl != '') {
+                t.find(".img").attr("src", post.firstImgUrl);
             }
-
             var tagList = post.tagList;
             for (var i in tagList) {
                 var li = buildTag(tagList[i]);
                 t.find(".post_tags").append(li);
             }
+            t.find(".category_a span").text(post.category);
+            t.find(".category_a").on('click', function (e) {
+                e.stopPropagation();
+                window.location.href = getView().postList + "?category=" + post.category;
+            });
             t.show();
             $("#post_container").append(t);
             t.on("click", function () {
@@ -61,11 +61,18 @@ $(function () {
         }
     }
 
-    function addTags(data){
-        for(var t in data){
-            var info = data[t].tagName + "("+data[t].tagNum+")";
+    function addTags(data) {
+        for (var t in data) {
+            var info = data[t].tagName + "(" + data[t].tagNum + ")";
             var li = buildTag(info);
             $("#tag_info_list").append(li);
+        }
+    }
+
+    function addCategories(data) {
+        for (var t in  data) {
+            var card = buildCategoryCard(data[t]);
+            $("#home_category_container").append(card);
         }
     }
 
@@ -88,7 +95,18 @@ $(function () {
         return li;
     }
 
-
+    function buildCategoryCard(data) {
+        console.log("data", data);
+        var category_card = $("#category_card_template").clone().removeAttr("id");
+        var href = getView().postList + "?category=" + data.name;
+        category_card.find(".category_href").attr("href", href);
+        category_card.find(".card-img-top").attr("src", data.url);
+        var title = data.name + "(" + data.num + ")";
+        category_card.find(".card-title strong").text(title);
+        category_card.find(".card-text").text(data.summary);
+        category_card.show();
+        return category_card;
+    }
 
     function ajaxOption(url, data, callback, option) {
         var defaultOption = {
@@ -116,19 +134,19 @@ $(function () {
     }
 
     var params = {
-        type : "home"
+        type: "home"
     }
     //loadHomePage
     ajaxOption(getAction().homePageListQuery, JSON.stringify(params), function (json) {
         if (json.success) {
             addPost(json.data.homePagePostList);
             addTags(json.data.tagInfoList);
+            addCategories(json.data.categoryInfoList);
         } else {
             console.log("load fail");
         }
     });
 });
-
 
 
 function getAction() {
@@ -139,8 +157,8 @@ function getAction() {
 
 function getView() {
     return {
-        display : "display",
-        postList : "postlist"
+        display: "display",
+        postList: "postlist"
     }
 }
 

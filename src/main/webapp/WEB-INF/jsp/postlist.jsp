@@ -182,7 +182,7 @@
 
             <div class="post-meta">
                 <div class="mb-2">
-                    <a href="https://orianna-zzo.github.io/series/">
+                    <a href="/view/blog/categoryShow">
                         <span class="font-weight-bold text-uppercase post-meta">
                             <i class="fas fa-bookmark pr-1" aria-hidden="true"></i>
                                  Recommend Series
@@ -190,8 +190,8 @@
                     </a>
                 </div>
 
-                <div class="post-meta" id="post_list_series" >
-                    <li class="py-1"><a href="https://orianna-zzo.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0"><span>Blog养成记 (16)</span></a></li>
+                <div class="post-meta" id="postList_category_container" >
+
                 </div>
             </div>
 
@@ -242,16 +242,14 @@
 
     <div class="post-meta li-x mt-2 div-x">
         <div>
-            <li><a href="https://orianna-zzo.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 杂技浅尝 </a></li>
-
-            <li><a href="https://orianna-zzo.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog养成记</a></li>
+            <li><a class="category"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i><span></span></a></li>
 
         </div>
 
         <div>
 
             <div class="li-x div-x post-meta">
-                <li class="pr-0"><a href="https://orianna-zzo.github.io/tags/"><i class="fas fa-tags"></i></a></li>
+                <li class="pr-0"><a href="/view/blog/tagShow"><i class="fas fa-tags"></i></a></li>
                 <%--tags--%>
                 <div class="tags-sm post_tags">
 
@@ -263,6 +261,20 @@
 
 </div>
 <li id = "post_list_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
+
+<%-- card模板 --%>
+<div class="card card-cascade wider mb-4 mt-2" id="postList_category_card_template" style="display: none">
+    <a class="category_href">
+        <div class="view view-cascade overlay">
+            <img class="card-img-top">
+            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+        </div>
+        <div class="card-body card-body-cascade text-center">
+            <h4 class="card-title"><strong></strong></h4>
+            <p class="card-text"></p>
+        </div>
+    </a>
+</div>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 

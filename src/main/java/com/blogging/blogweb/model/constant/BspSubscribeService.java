@@ -25,6 +25,7 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_postListPagingQuery);
             add(BSPServiceName.APS_imageObtain);
             add(BSPServiceName.APS_tagShow);
+            add(BSPServiceName.APS_categoryShow);
 
             /**
              * BM
@@ -48,6 +49,8 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_delTag);
             add(BSPServiceName.APS_BM_addCategory);
             add(BSPServiceName.APS_BM_queryCategory);
+            add(BSPServiceName.APS_BM_modifyCategory);
+            add(BSPServiceName.APS_BM_queryCategoryNames);
 
             /**
              * AMS

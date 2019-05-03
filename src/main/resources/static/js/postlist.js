@@ -3,9 +3,9 @@ $(function () {
 
 
     function addPost(data) {
-        for(var p in data) {
+        for (var p in data) {
             var post = data[p];
-            var t = $("#post_list_post_template").clone().attr("id",post.postId);
+            var t = $("#post_list_post_template").clone().attr("id", post.postId);
             t.find(".title").text(post.title);
             t.find(".date").text(post.updateTime);
             t.find(".summary").text(post.summary);
@@ -16,6 +16,12 @@ $(function () {
                 var li = buildTag(tagList[i])
                 t.find(".post_tags").append(li);
             }
+            t.find(".category span").text(post.category);
+            t.find(".category").on('click', function (e) {
+                e.stopPropagation();
+                window.location.href = "?category=" + post.category;
+
+            })
             t.show();
             $("#post_list_post_container").append(t);
             t.on("click", function () {
@@ -24,27 +30,47 @@ $(function () {
         }
     }
 
-    function removePost(){
+    function removePost() {
         $("#post_list_post_container").find(".post-card").remove();
     }
 
-    function addTags(data){
-        for(var t in data){
-            var info = data[t].tagName + "("+data[t].tagNum+")";
+    function addTags(data) {
+        for (var t in data) {
+            var info = data[t].tagName + "(" + data[t].tagNum + ")";
             var li = buildTag(info);
             $("#post_list_tag_infos").append(li);
         }
     }
 
+    function addCategories(data) {
+        for (var t in  data) {
+            var card = buildCategoryCard(data[t]);
+            $("#postList_category_container").append(card);
+        }
+    }
+
+    function buildCategoryCard(data) {
+        var category_card = $("#postList_category_card_template").clone().removeAttr("id");
+        var href = "?category=" + data.name;
+        category_card.find(".category_href").attr("href", href);
+        category_card.find(".card-img-top").attr("src", data.url);
+        var title = data.name + "(" + data.num + ")";
+        category_card.find(".card-title strong").text(title);
+        category_card.find(".card-text").text(data.summary);
+        category_card.show();
+        return category_card;
+    }
+
+
     function addPaging(data) {
-        layui.use('laypage', function(){
+        layui.use('laypage', function () {
             var laypage = layui.laypage;
             //执行一个laypage实例
             laypage.render({
                 elem: 'lay-page',
-                count: data ,
-                limit : 5,
-                groups : 2,
+                count: data,
+                limit: 5,
+                groups: 2,
                 jump: function (obj, first) {
                     //首次不执行
                     if (!first) {
@@ -86,7 +112,6 @@ $(function () {
     }
 
 
-
     function ajaxOption(url, data, callback, option) {
         var defaultOption = {
             contentType: "application/json",
@@ -113,35 +138,44 @@ $(function () {
     }
 
     var param = {
-        pageNum : 1,
-        pageSize : 5,
-        type : "all"
+        pageNum: 1,
+        pageSize: 5,
+        type: "all"
     };
-    var type = window.location.search.split("=")[0].replace("?","");
-    if(null != type && type == "tag"){
+    var type = window.location.search.split("=")[0].replace("?", "");
+    if (null != type && type == "tag") {
         param.type = "tag"
         param.typeValue = decodeURIComponent(window.location.search.split("=")[1]);
         $("#post_list_title").text(param.typeValue.toUpperCase());
-        $("#post_list_head_title").text(param.typeValue.toUpperCase()+" | TECHONE")
+        $("#post_list_head_title").text(param.typeValue.toUpperCase() + " | TECHONE")
     }
-    if(param.type == "all"){
+
+    if (null != type && type == "category") {
+        param.type = "category"
+        param.typeValue = decodeURIComponent(window.location.search.split("=")[1]);
+        $("#post_list_title").text(param.typeValue.toUpperCase());
+        $("#post_list_head_title").text(param.typeValue.toUpperCase() + " | TECHONE")
+    }
+
+    if (param.type == "all") {
         $("#post_list_title").text("所有文章");
-        $("#post_list_head_title").text(param.type.toUpperCase()+" | TECHONE")
+        $("#post_list_head_title").text(param.type.toUpperCase() + " | TECHONE")
     }
     //loadPostList
     ajaxOption(getAction().postListQuery, JSON.stringify(param), function (json) {
         if (json.success) {
             //最后加载post
+            console.log("返回", json)
             addTags(json.data.tagInfoList);
+            addCategories(json.data.categoryInfoList);
             addPaging(json.data.totalNum);
             addPost(json.data.postList);
-            $("#post_list_amount").text(json.data.totalNum+" posts");
+            $("#post_list_amount").text(json.data.totalNum + " posts");
         } else {
             console.log("load fail");
         }
     });
 });
-
 
 
 function getAction() {

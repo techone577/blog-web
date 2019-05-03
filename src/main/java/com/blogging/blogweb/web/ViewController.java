@@ -16,20 +16,10 @@ public class ViewController {
         return "admin_index";
     }
 
-    @RequestMapping(value = "/sign_in")
-    public String getSignView () {
-        return "sign_in";
-    }
-
-    @RequestMapping(value = "/sign_up")
-    public String getRegistryView () {
-        return "sign_up";
-    }
-
-    @RequestMapping(value = "/editor")
-    public String getTest(){
-        return "editor";
-    }
+//    @RequestMapping(value = "/editor")
+//    public String getTest(){
+//        return "editor";
+//    }
 
     @RequestMapping(value = "/home")
     public String getHome(){
@@ -54,6 +44,11 @@ public class ViewController {
     @RequestMapping(value = "/tagShow")
     public String getTagShow(){
         return "tagShow";
+    }
+
+    @RequestMapping(value = "/categoryShow")
+    public String getCategoryShow(){
+        return "categoryShow";
     }
 
 

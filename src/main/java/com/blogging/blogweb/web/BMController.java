@@ -254,4 +254,20 @@ public class BMController {
         return resp;
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/queryCategoryNames", method = RequestMethod.POST)
+    @ValidAuthentication
+    public Response queryCategoryNames() {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_queryCategoryNames, null);
+        return resp;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/modifyCategory", method = RequestMethod.POST)
+    @ValidAuthentication(permission = "root")
+    public Response modifyCategory(@RequestBody BMCategoryModifyDTO dto) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_modifyCategory, JsonUtil.toString(dto));
+        return resp;
+    }
+
 }

@@ -21,35 +21,38 @@ public class PostController {
 
     /**
      * 博客新增
+     *
      * @param entity
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public Response addPost(@RequestBody BMPostAddDTO entity){
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public Response addPost(@RequestBody BMPostAddDTO entity) {
         Response resp = serviceClient.call(BSPServiceName.APS_BM_postAdd, JsonUtil.toString(entity));
         return resp;
     }
 
     /**
      * 首页文章查询
+     *
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/homePageQuery",method = RequestMethod.POST)
-    public Response homePageQuery(@RequestBody PostListQueryDTO queryDTO){
-        Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery,null);
+    @RequestMapping(value = "/homePageQuery", method = RequestMethod.POST)
+    public Response homePageQuery(@RequestBody PostListQueryDTO queryDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery, null);
         return resp;
     }
 
     /**
      * 博客展示
+     *
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/queryBlog",method = RequestMethod.POST)
-    public Response queryBlog(@RequestBody PostQueryDTO queryDTO){
-        Response resp = serviceClient.call(BSPServiceName.APS_blogQuery,JsonUtil.toString(queryDTO));
+    @RequestMapping(value = "/queryBlog", method = RequestMethod.POST)
+    public Response queryBlog(@RequestBody PostQueryDTO queryDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_blogQuery, JsonUtil.toString(queryDTO));
         return resp;
     }
 
@@ -57,9 +60,9 @@ public class PostController {
      * 分页查询
      */
     @ResponseBody
-    @RequestMapping(value = "/queryPostList",method = RequestMethod.POST)
-    public Response queryPostList(@RequestBody PostListQueryDTO queryDTO){
-        Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery,JsonUtil.toString(queryDTO));
+    @RequestMapping(value = "/queryPostList", method = RequestMethod.POST)
+    public Response queryPostList(@RequestBody PostListQueryDTO queryDTO) {
+        Response resp = serviceClient.call(BSPServiceName.APS_postListPagingQuery, JsonUtil.toString(queryDTO));
         return resp;
     }
 
@@ -67,9 +70,21 @@ public class PostController {
      * 展示所有tag
      */
     @ResponseBody
-    @RequestMapping(value = "/queryAllTags",method = RequestMethod.POST)
-    public Response queryAllTags(){
-        Response resp = serviceClient.call(BSPServiceName.APS_tagShow,null);
+    @RequestMapping(value = "/queryAllTags", method = RequestMethod.POST)
+    public Response queryAllTags() {
+        Response resp = serviceClient.call(BSPServiceName.APS_tagShow, null);
         return resp;
     }
+
+    /**
+     * 查询所有分类信息
+     */
+    @ResponseBody
+    @RequestMapping(value = "/queryAllCategories", method = RequestMethod.POST)
+    public Response queryAllCategories() {
+        Response resp = serviceClient.call(BSPServiceName.APS_categoryShow, null);
+        return resp;
+    }
+
+
 }
