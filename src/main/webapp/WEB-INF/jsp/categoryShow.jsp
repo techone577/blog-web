@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"/>
 
     <title id="tag_show_head_title">
         分类 | TECHONE
@@ -27,21 +27,24 @@
     <style type="text/css">
         @media (min-width: 800px) and (max-width: 850px) {
             .navbar:not(.top-nav-collapse) {
-                background: #1C2331!important;
+                background: #1C2331 !important;
             }
         }
-        #category_container{
-            display:flex;
+
+        #category_container {
+            display: flex;
             align-items: flex-end;
             flex-wrap: wrap;
             justify-content: space-around;
         }
-        .card{
-            width:250px;
+
+        .card {
+            width: 250px;
         }
-        .card img{
-            width:250px;
-            height:178px;
+
+        .card img {
+            width: 250px;
+            height: 178px;
 
         }
     </style>
@@ -56,12 +59,14 @@
 
         <a class="navbar-brand" href="/view/blog/home">
 
-            <img class="avatar" src="" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+            <img class="avatar" src="" style="width: 40px!important;height: auto;" class="d-inline-block align-top"
+                 alt="">
 
             <strong> TECHONE</strong>
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,17 +79,17 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode" >LeetCode  </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode">LeetCode </a>
                 </li>
 
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist" >Blog  </a>
+                    <a class="nav-link" href="/view/blog/postlist">Blog </a>
                 </li>
 
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/about/" >About  </a>
+                    <a class="nav-link" href="https://orianna-zzo.github.io/about/">About </a>
                 </li>
             </ul>
 
@@ -93,40 +98,45 @@
     </div>
 </nav>
 
-<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;">
 
     <div class="carousel-inner" role="listbox">
 
         <div class="carousel-item active">
-            <div class="view" style="background-image: url('/images/bg/fan.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/fan.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/mirror.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/mirror.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/sea.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/sea.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/woods.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/woods.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
@@ -140,25 +150,28 @@
             <div class="col-12 col-sm-5 align-middle">
                 <a href="/view/blog/home">
 
-                    <img class="pull-right avatar avatar-md" src="/images/avatar/avatar.jpeg" alt="" >
+                    <img class="pull-right avatar avatar-md" src="/images/avatar/avatar.jpeg" alt="">
 
                 </a>
             </div>
 
             <div class="col-12 col-sm-7 text-left pl-2">
                 <a href="/view/blog/home">
-                    <h1 class="mb-2 h1" style="font-weight: 300;" >
+                    <h1 class="mb-2 h1" style="font-weight: 300;">
                         <strong>TECHONE</strong>
                     </h1>
                 </a>
 
                 <div class="mt-2" style="font-size: 1rem; color: white;">
 
-                    <a href="https://github.com/techon577" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
+                    <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
+                                                                                             aria-hidden="true"></i></a>
 
-                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1" aria-hidden="true"></i></a>
+                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
+                                                                                               aria-hidden="true"></i></a>
 
-                    <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+                    <a href="mailto:duanyuntian577@gmail.com" target="_blank" rel="noopener"><i
+                            class="fab fa-google pr-1" aria-hidden="true"></i></a>
 
                     <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
                 </div>
@@ -218,7 +231,7 @@
     </div>
 </main>
 
-<li id = "tag_show_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
+<li id="tag_show_tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 
 <div class="card card-cascade wider mb-4 mt-2" id="category_show_card_template" style="display: none">
     <a class="category_href">
@@ -236,22 +249,26 @@
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
 
-
     <div class="pb-2 mt-5 pt-5">
 
-        <a href="//github.com/orianna-zzo " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>
+        <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
+                                                                                  aria-hidden="true"></i></a>
 
-        <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+        <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
+                                                                                   aria-hidden="true"></i></a>
 
-        <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+        <a href="mailto:duanyuntian577@gmail.com" target="_blank" rel="noopener"><i
+                class="fab fa-google pr-1" aria-hidden="true"></i></a>
 
-        <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+        <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1"
+                                              aria-hidden="true"></i></a>
 
     </div>
 
     <div class="copyright py-4">
 
-        <span>  2019 - NOW &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">Blogging</a> by <a href='https://github.com/orianna-zzo' target="_blank">TECHONE</a>  </span>
+        <span>  2019 - NOW &copy; | Theme <a href='https://github.com/techone577' target="_blank">Blogging</a> by <a
+                href='https://github.com/orianna-zzo' target="_blank">TECHONE</a>  </span>
     </div>
 
 

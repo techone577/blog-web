@@ -72,6 +72,8 @@ public class BSPServiceName {
 
     public static final String APS_BM_queryCategoryNames = "Blogging.APS.BMController.queryCategoryNames";
 
+    public static final String APS_BM_deleteCategory = "Blogging.APS.BMController.deleteCategory";
+
 
     /**
      * AMS

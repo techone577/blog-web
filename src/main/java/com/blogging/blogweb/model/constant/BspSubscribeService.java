@@ -51,6 +51,7 @@ public class BspSubscribeService {
             add(BSPServiceName.APS_BM_queryCategory);
             add(BSPServiceName.APS_BM_modifyCategory);
             add(BSPServiceName.APS_BM_queryCategoryNames);
+            add(BSPServiceName.APS_BM_deleteCategory);
 
             /**
              * AMS

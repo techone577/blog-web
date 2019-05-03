@@ -270,4 +270,12 @@ public class BMController {
         return resp;
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/deleteCategory", method = RequestMethod.POST)
+    @ValidAuthentication(permission = "root")
+    public Response deleteCategory(@RequestBody BMCategoryModifyDTO dto) {
+        Response resp = serviceClient.call(BSPServiceName.APS_BM_deleteCategory, JsonUtil.toString(dto));
+        return resp;
+    }
+
 }

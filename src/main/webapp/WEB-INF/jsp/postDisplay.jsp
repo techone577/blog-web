@@ -158,8 +158,8 @@
                     <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
                                                                                                aria-hidden="true"></i></a>
 
-                    <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i
-                            class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+                    <a href="mailto:duanyuntian577@gmail.com" target="_blank" rel="noopener"><i
+                            class="fab fa-google pr-1" aria-hidden="true"></i></a>
 
                     <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1"
                                                           aria-hidden="true"></i></a>
@@ -276,19 +276,17 @@
 
     <div class="pb-2 mt-5 pt-5">
 
-        <a href="//github.com/orianna-zzo " target="_blank" rel="noopener"><i class="fab fa-github mr-3"
-                                                                              aria-hidden="true"></i></a>
+        <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
+                                                                                  aria-hidden="true"></i></a>
 
+        <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
+                                                                                   aria-hidden="true"></i></a>
 
-        <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3"
-                                                                                aria-hidden="true"></i></a>
+        <a href="mailto:duanyuntian577@gmail.com" target="_blank" rel="noopener"><i
+                class="fab fa-google pr-1" aria-hidden="true"></i></a>
 
-
-        <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3"
-                                                                                    aria-hidden="true"></i></a>
-
-
-        <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+        <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1"
+                                              aria-hidden="true"></i></a>
 
 
     </div>

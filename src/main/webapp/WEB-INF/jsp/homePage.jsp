@@ -19,7 +19,7 @@
     <style type="text/css">
         @media (min-width: 800px) and (max-width: 850px) {
             .navbar:not(.top-nav-collapse) {
-                background: #1C2331!important;
+                background: #1C2331 !important;
             }
         }
     </style>
@@ -34,27 +34,29 @@
     <div class="container">
         <%--商标logo--%>
         <a class="navbar-brand" href="/view/blog/home">
-            <img class="avatar" src="" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+            <img class="avatar" src="" style="width: 40px!important;height: auto;" class="d-inline-block align-top"
+                 alt="">
             <strong> TECHONE</strong>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <%--导航栏组件--%>
+        <%--导航栏组件--%>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item  active ">
                     <a class="nav-link" href="/view/blog/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode" >LeetCode  </a>
+                    <a class="nav-link" href="/view/blog/postlist?tag=LeetCode">LeetCode </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/view/blog/postlist" >Blog  </a>
+                    <a class="nav-link" href="/view/blog/postlist">Blog </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/about/" >About  </a>
+                    <a class="nav-link" href="https://orianna-zzo.github.io/about/">About </a>
                 </li>
             </ul>
         </div>
@@ -62,11 +64,9 @@
 </nav>
 
 
-
-
 <%--背景--%>
 
-<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" >
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel">
 
 
     <ol class="carousel-indicators">
@@ -86,28 +86,32 @@
     <%--背景jpg--%>
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-            <div class="view" style="background-image: url('/images/bg/fan.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/fan.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/mirror.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/mirror.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
         </div>
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/sea.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/sea.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
@@ -115,7 +119,8 @@
 
 
         <div class="carousel-item">
-            <div class="view" style="background-image: url('/images/bg/woods.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="view"
+                 style="background-image: url('/images/bg/woods.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                 </div>
             </div>
@@ -124,12 +129,11 @@
     </div>
 
 
-
     <div class="carousel-content text-center white-text wow fadeIn">
         <div class="row mx-0 headfont mb-5 pb-3">
             <div class="col-12 col-sm-5 align-middle">
                 <a href="/view/blog/home">
-                    <img class="pull-right avatar avatar-lg " src="/images/avatar/avatar.jpeg" alt="" >
+                    <img class="pull-right avatar avatar-lg " src="/images/avatar/avatar.jpeg" alt="">
                 </a>
             </div>
             <div class="col-12 col-sm-7 text-left pl-5">
@@ -152,13 +156,17 @@
                 <div class="mt-2" style="font-size: 2rem; color: white;">
 
                     <%--github--%>
-                    <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>
+                    <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
+                                                                                              aria-hidden="true"></i></a>
                     <%--weibo--%>
-                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1" aria-hidden="true"></i></a>
+                    <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
+                                                                                               aria-hidden="true"></i></a>
                     <%--instagram--%>
-                    <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+                    <a href="mailto:duanyuntian577@gmail.com" target="_blank" rel="noopener"><i
+                            class="fab fa-google pr-1" aria-hidden="true"></i></a>
                     <%--envelope--%>
-                    <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+                    <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open pr-1"
+                                                            aria-hidden="true"></i></a>
 
                 </div>
 
@@ -166,7 +174,6 @@
             </div>
         </div>
     </div>
-
 
 
     <%--prev--%>
@@ -267,7 +274,8 @@
     <div class="post-meta li-x mt-2 div-x">
         <%-- 所属series--%>
         <div class="post_categories">
-            <li class="category_li"><a class="category_a"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i><span></span></a></li>
+            <li class="category_li"><a class="category_a"><i class="fas fa-folder-open pr-1"
+                                                             aria-hidden="true"></i><span></span></a></li>
         </div>
         <%-- 所持有的tag --%>
         <div>
@@ -297,17 +305,25 @@
 </div>
 
 <%--tag模板--%>
-<li id = "tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
+<li id="tag_template"><a class="home_tag" role="button" style="display: none">名称 </a></li>
 
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
     <div class="pb-2 mt-5 pt-5">
-        <a href="//github.com/orianna-zzo " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>
-        <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
-        <a href="//instagram.com/seagulldreamer/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
-        <a href="mailto:zhengziou@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+        <a href="https://github.com/techone577" target="_blank" rel="noopener"><i class="fab fa-github pr-1"
+                                                                                  aria-hidden="true"></i></a>
+
+        <a href="https://weibo.com/u/2279734863" target="_blank" rel="noopener"><i class="fab fa-weibo pr-1"
+                                                                                   aria-hidden="true"></i></a>
+
+        <a href="mailto:duanyuntian577@gmail.com" target="_blank" rel="noopener"><i
+                class="fab fa-google pr-1" aria-hidden="true"></i></a>
+
+        <a href="mailto:1421709476@qq.com"><i class="far fa-envelope-open pr-1"
+                                              aria-hidden="true"></i></a>
     </div>
     <div class="copyright py-4">
-        <span>  2019 - NOW &copy; | Theme <a href='https://github.com/techone577' target="_blank">Blogging</a> by <a href='https://github.com/techone577' target="_blank">TechOne</a>  </span>
+        <span>  2019 - NOW &copy; | Theme <a href='https://github.com/techone577' target="_blank">Blogging</a> by <a
+                href='https://github.com/techone577' target="_blank">TechOne</a>  </span>
     </div>
 
 
@@ -317,11 +333,11 @@
 <script type="text/javascript" src="/js/jquery.smooth-scroll.min.js"></script>
 <script type="text/javascript" src="/js/home/popper.min.js"></script>
 <script type="text/javascript" src="/js/home/holder.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.js" ></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
 <script type="text/javascript" src="/js/home/mdb.min.js"></script>
 <script type="text/javascript" src="/js/home/main.js"></script>
-<script src="/js/home/highlight.pack.js"> </script>
-<script src="/js/home.js"> </script>
+<script src="/js/home/highlight.pack.js"></script>
+<script src="/js/home.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script type="text/javascript">
@@ -330,15 +346,12 @@
 </script>
 
 <script type="text/javascript">
-    $(function(){
-        $('#site-header').carousel({interval:3000});
+    $(function () {
+        $('#site-header').carousel({interval: 3000});
     })
 </script>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
 
 
 </body>
