@@ -89,7 +89,7 @@
 
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="https://orianna-zzo.github.io/about/">About </a>
+                    <a class="nav-link" href="/view/blog/about">About </a>
                 </li>
             </ul>
 
