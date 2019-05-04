@@ -165,7 +165,6 @@ $(function () {
     ajaxOption(getAction().postListQuery, JSON.stringify(param), function (json) {
         if (json.success) {
             //最后加载post
-            console.log("返回", json)
             addTags(json.data.tagInfoList);
             addCategories(json.data.categoryInfoList);
             addPaging(json.data.totalNum);
@@ -173,6 +172,8 @@ $(function () {
             $("#post_list_amount").text(json.data.totalNum + " posts");
         } else {
             console.log("load fail");
+            if(json.errorCode == 10006)
+                window.location.href = "http://www.ixirong.com/404.html"
         }
     });
 });

@@ -50,6 +50,8 @@ public class ViewController {
     public String getCategoryShow(){
         return "categoryShow";
     }
-
-
+    @RequestMapping(value = "/about")
+    public String about(){
+        return "about";
+    }
 }
